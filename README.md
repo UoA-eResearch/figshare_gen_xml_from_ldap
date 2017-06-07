@@ -18,7 +18,7 @@ Just execute:
 ```
   run.rb
 ```
-and get a new XML file in the user_xml_files/ directory, called figshare_hr_feed_<Year-Month-Day>.xml
+and get a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
 This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
 
 conf/auth.json is of form
