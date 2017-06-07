@@ -15,4 +15,10 @@ users_groups.each do |k,v|
   user_attributes[k][:primary_group] = @override_group[k] != nil ? @override_group[k] : (v.length == 1 ? v[0] : '') 
 end
 #Generate the Figshare HR feed XML file from the collected attributes.
-gen_xml(users: user_attributes, filename: "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml")
+new_filename = "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml"
+gen_xml(users: user_attributes, filename: new_filename)
+
+#automate next file to upload for python script to consume.
+File.open("Upload/hr_file_to_upload.json","w") do |fd|
+  puts "{\n\"filename\": \"../#{new_filename}\"\n}"
+end
