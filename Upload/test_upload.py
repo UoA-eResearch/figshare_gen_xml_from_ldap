@@ -3,9 +3,9 @@
 import requests
 import json
 
-FILE_NAME = '../user_xml_files/hr_feed_2017-06-06.xml'
-API_URL = 'https://api.figshare.com/v2/institution/hrfeed/upload'
-KEY_FILE = '../conf/figshare_hr_key.json'
+FILE_NAME = '../user_xml_files/figshare_hr_user.xml'
+API_URL = 'https://api.figsh.com/v2/institution/hrfeed/upload'
+KEY_FILE = '../conf/test_figshare_hr_key.json'
 
 with open(KEY_FILE) as json_file:
     json_data = json.load(json_file)
