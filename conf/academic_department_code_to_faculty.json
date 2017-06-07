@@ -1,0 +1,441 @@
+{
+  "ACADADMIN":       null,           //  Academic Administration Academic Services
+  "ACADRECDS":       null,           //  Academic Records  Academic Services
+  "ACADSERV":        null,           //  Academic Services Academic Services
+  "ACASERVADM":      null,           //  Academic Services Admin Academic Services
+  "ADMISSIONS":      null,           //  Admissions  Academic Services
+  "CALENDAR":        null,           //  Academic Programmes Academic Services
+  "EXAMINATNS":      null,           //  Examinations  Academic Services
+  "GRADUATION":      null,           //  Graduation  Academic Services
+  "SATRANS":         null,           //  Contact Centre  Academic Services
+  "SCHOLSHPS":       null,           //  Scholarships  Academic Services
+  "STUDFIN":         null,           //  Student Financials  Academic Services
+  "BIOENGINST":      "abi",          //  Bioengineering Institute  Bioengineering Institute
+  "ACCOMHALLS":      null,           //  Accommodation Halls Campus Life
+  "CAMPLIFEOT":      null,           //  Campus Life Other Campus Life
+  "EARLYCHILD":      null,           //  Early Childhood Centres Campus Life
+  "ENGAGEVENT":      null,           //  Student Engagement  Campus Life
+  "EVENTSVS":        null,           //  Event Services  Campus Life
+  "GOLDIE":          null,           //  Goldie Wines  Campus Life
+  "MAIDMENT":        null,           //  Maidment Theatre  Campus Life
+  "RECCENTRE":       null,           //  Recreation Centre Campus Life
+  "RETAILSVS":       null,           //  Retail and Food Services  Campus Life
+  "SPORTREC":        null,           //  Sports and Recreation Campus Life
+  "SPORTSREC":       null,           //  Sports and Recreation Campus Life
+  "STUDENGAGE":      null,           //  Student Engagement  Campus Life
+  "STUDHEALTH":      null,           //  Student Health and Counselling  Campus Life
+  "CDO":             null,           //  Chief Digital Officer's Office  Chief Digital Officer's Office
+  "HRTLNTRCRT":      null,           //  Talent and Recruitment  Chief Digital Officer's Office
+  "NESI":            null,           //  Nat eScience Infrastructure Chief Digital Officer's Office
+  "COMMS":           null,           //  Communications  Communications and Marketing
+  "SCHOOLPART":      null,           //  Schools Partnership Communications and Marketing
+  "STUDISOTH":       null,           //  Comms and Marketing Other Communications and Marketing
+  "UNIMARK":         null,           //  University Marketing  Communications and Marketing
+  "EQUITY":          null,           //  Equity  Equity
+  //"EXAMINATNS":    null,           //  Examinations  Equity (Duplicate department key?)
+  "CAI":             "nicai",
+  "ARCHPLAN":        "nicai",        //  Architecture and Planning Faculty Creative Arts & Indust
+  "CAIADMN":         "nicai",        //  Creative Arts and Ind Admin Faculty Creative Arts & Indust
+  "CAICOMMKTG":      "nicai",        //  Communications and Marketing  Faculty Creative Arts & Indust
+  "CAIFACSERV":      "nicai",        //  Facilities and Services Faculty Creative Arts & Indust
+  "CAIFINANCE":      "nicai",        //  Finance Faculty Creative Arts & Indust
+  "CAIGRPSERV":      "nicai",        //  Group Services  Faculty Creative Arts & Indust
+  "CAIINFOSER":      "nicai",        //  Information Services  Faculty Creative Arts & Indust
+  "CAIOPADMIN":      "nicai",        //  Operations Administration Faculty Creative Arts & Indust
+  "CAISASE":         "nicai",        //  Student Acad Services & Enggmt  Faculty Creative Arts & Indust
+  "CNZARD":          "nicai",        //  Centre for Art Studies  Faculty Creative Arts & Indust
+  "DANCE":           "nicai",        //  Dance Studies Programme Faculty Creative Arts & Indust
+  "FINART":          "nicai",        //  Fine Arts Faculty Creative Arts & Indust
+  "MUSIC":           "nicai",        //  Music Faculty Creative Arts & Indust
+  "ARTFAC":          "arts",
+  "ALSL":            "arts",         //  App Lang Studies & Linguistics  Faculty of Arts
+  "ANTHRO":          "arts",         //  Anthropology  Faculty of Arts
+  "ARTCOMMKTG":      "arts",         //  Communications and Marketing  Faculty of Arts
+  "ARTFACADMN":      "arts",         //  Arts Admin  Faculty of Arts
+  "ARTFACRSCH":      "arts",         //  Arts Research Faculty of Arts
+  "ARTFACSERV":      "arts",         //  Facilities and Services Faculty of Arts
+  "ARTFINANCE":      "arts",         //  Finance Faculty of Arts
+  "ARTGRPSERV":      "arts",         //  Group Services  Faculty of Arts
+  "ARTHIS":          "arts",         //  Art History Faculty of Arts
+  "ARTINFOSER":      "arts",         //  Information Services  Faculty of Arts
+  "ARTOPADMIN":      "arts",         //  Operations Administration Faculty of Arts
+  "ARTSTACSER":      "arts",         //  Student and Academic Services Faculty of Arts
+  "ARTSTDVENG":      "arts",         //  Student Dvlpmt and Enggmt Faculty of Arts
+  "ASIL&L":          "arts",         //  Asian Studies Faculty of Arts
+  "CLAANC":          "arts",         //  Classics & Ancient History  Faculty of Arts
+  "COMPASS":         "compass",      //  Compass Faculty of Arts
+  "CSLANGLING":      "arts",         //  Cultures, Languages & Linguist  Faculty of Arts
+  "DEVST":           "arts",         //  Development Studies Faculty of Arts
+  "ENGL":            "arts",         //  English Drama & WritingStudies  Faculty of Arts
+  "EULALT":          "arts",         //  European Lang and Literature  Faculty of Arts
+  "EUROPEINS":       "arts",         //  Europe Institute  Faculty of Arts
+  "FTV&M":           "arts",         //  Media and Communication Faculty of Arts
+  "HIST":            "arts",         //  History Faculty of Arts
+  "HUMANITIES":      "arts",         //  Humanities  Faculty of Arts
+  "MAOPACSTD":       "arts",         //  Maori and Pacific Studies Faculty of Arts
+  "MAOSTU":          "arts",         //  Maori Studies Faculty of Arts
+  "NGAPAE":          "arts",         //  Nga Pae o te Maramatanga  Faculty of Arts
+  "NZIPACRSH":       "arts",         //  NZ Inst for Pacific Research  Faculty of Arts
+  "PACSTU":          "arts",         //  Pacific Studies Faculty of Arts
+  "PHIL":            "arts",         //  Philosophy  Faculty of Arts
+  "POLSTU":          "arts",         //  Politics & International Relns  Faculty of Arts
+  "SOCIOL":          "arts",         //  Sociology Faculty of Arts
+  "SOCSCI":          "arts",         //  Social Sciences Faculty of Arts
+  //"TFC":           "arts",         //  Tertiary Foundation Cert  Faculty of Arts (duplicate key)
+  "THEOL":           "arts",         //  Theology  Faculty of Arts
+  "ACTFIN":          "business",     //  Accounting and Finance  Faculty of Business & Economic
+  "B&ECOMMKTG":      "business",     //  Communications and Marketing  Faculty of Business & Economic
+  "B&EFACSERV":      "business",     //  Facilities and Services Faculty of Business & Economic
+  "B&EFINANCE":      "business",     //  Finance Faculty of Business & Economic
+  "B&EGRPSERV":      "business",     //  Group Services  Faculty of Business & Economic
+  "B&EINFOSER":      "business",     //  Information Services  Faculty of Business & Economic
+  "B&EOPADMIN":      "business",     //  Operations Administration Faculty of Business & Economic
+  "B&ESTACSER":      "business",     //  Student and Academic Services Faculty of Business & Economic
+  "B&ESTDVENG":      "business",     //  Student Dvlpmt and Enggmt Faculty of Business & Economic
+  "BUSEACASTU":      "business",     //  Academic and Student Services Faculty of Business & Economic
+  "BUSEADMNT":       "business",     //  Advancement Faculty of Business & Economic
+  "BUSEC":           "business",     //  Business and Economics  Faculty of Business & Economic
+  "BUSECADM":        "business",     //  Faculty of Bus. & Eco Admin Faculty of Business & Economic
+  "BUSECADMN":       "business",     //  Faculty of Bus. & Eco Admin Faculty of Business & Economic
+  "BUSERESOFF":      "business",     //  B&E Research Office Faculty of Business & Economic
+  "BUSETLUNIT":      "business",     //  Teaching and Learning Faculty of Business & Economic
+  "CFEL":            "business",     //  Innovation & Entrepreneurship Faculty of Business & Economic
+  "COMLAW":          "business",     //  Commercial Law  Faculty of Business & Economic
+  "CSCM":            "business",     //  Centre for Supply Chain Mgmt  Faculty of Business & Economic
+  "ECON":            "business",     //  Economics Faculty of Business & Economic
+  "ENERGYCTR":       "business",     //  Energy Centre Faculty of Business & Economic
+  "GSE":             "business",     //  Graduate School of Management Faculty of Business & Economic
+  "GSMEXEEDU":       "business",     //  Executive Education Faculty of Business & Economic
+  "GSMMASPRO":       "business",     //  Business Masters  Faculty of Business & Economic
+  "GSMMBAPRO":       "business",     //  MBA Programmes  Faculty of Business & Economic
+  "ISOM":            "business",     //  Info Systems & Operations Mgmt  Faculty of Business & Economic
+  "M&IB":            "business",     //  Management & Intl Business  Faculty of Business & Economic
+  "MIRASZASZY":      "business",     //  Mira Szaszy Research Centre Faculty of Business & Economic
+  "MRKTNG":          "business",     //  Marketing Faculty of Business & Economic
+  "NZASIN":          "business",     //  NZ Asia Institute Faculty of Business & Economic
+  "NZLI":            "business",     //  NZ Leadership Institute Faculty of Business & Economic
+  "PROPTY":          "business",     //  Property  Faculty of Business & Economic
+  "CHSSWK":          "edu",          //  Counselling, HumServ & SocWrk Faculty of Educ Social Work
+  "CLEAR":           "edu",          //  Cent Learning & Rsch Higher Ed  Faculty of Educ Social Work
+  "CRSTIE":          "edu",          //  Critical Studies in Education Faculty of Educ Social Work
+  "CURRPD":          "edu",          //  Curriculum and Pedagogy Faculty of Educ Social Work
+  "EDADMN":          "edu",          //  Education and Social Work Admn  Faculty of Educ Social Work
+  "EDUCOMMKTG":      "edu",          //  Communications and Marketing  Faculty of Educ Social Work
+  "EDUFAC":          "edu",          //  Education and Social Work Faculty of Educ Social Work
+  "EDUFACSERV":      "edu",          //  Facilities and Services Faculty of Educ Social Work
+  "EDUFINANCE":      "edu",          //  Finance Faculty of Educ Social Work
+  "EDUGRPSERV":      "edu",          //  Group Services  Faculty of Educ Social Work
+  "EDUINFOSER":      "edu",          //  Information Services  Faculty of Educ Social Work
+  "EDUOPADMIN":      "edu",          //  Operations Administration Faculty of Educ Social Work
+  "EDUSTACSER":      "edu",          //  Student and Academic Services Faculty of Educ Social Work
+  "EDUSTDVENG":      "edu",          //  Student Dvlpmt and Enggmt Faculty of Educ Social Work
+  "LRNDVP":          "edu",          //  Learning,Development&ProfPrac Faculty of Educ Social Work
+  "STARPATH":        "edu",          //  Starpath  Faculty of Educ Social Work
+  "TEAMSOL":         "edu",          //  Team Solutions  Faculty of Educ Social Work
+  "TEPUNA":          "edu",          //  Te Puna Wananga Faculty of Educ Social Work
+  "CHEMAT":          "eng",          //  Chemical and Materials Eng  Faculty of Engineering
+  "CIVENV":          "eng",          //  Civil and Environmental Eng Faculty of Engineering
+  "ECE":             "eng",          //  Electrical and Computer Eng Faculty of Engineering
+  "ENGCENT":         "eng",          //  Engineering Research  Faculty of Engineering
+  "ENGCOMMKTG":      "eng",          //  Communications and Marketing  Faculty of Engineering
+  "ENGFAC":          "eng",          //  Engineering Faculty of Engineering
+  "ENGFACADMN":      "eng",          //  Engineering Admin Faculty of Engineering
+  "ENGFACSERV":      "eng",          //  Facilities and Services Faculty of Engineering
+  "ENGFINANCE":      "eng",          //  Finance Faculty of Engineering
+  "ENGGRPSERV":      "eng",          //  Group Services  Faculty of Engineering
+  "ENGINFOSER":      "eng",          //  Information Services  Faculty of Engineering
+  "ENGOPADMIN":      "eng",          //  Operations Administration Faculty of Engineering
+  "ENGSCI":          "eng",          //  Engineering Science Faculty of Engineering
+  "ENGSTACSER":      "eng",          //  Student and Academic Services Faculty of Engineering
+  "ENGSTDVENG":      "eng",          //  Student Dvlpmt and Enggmt Faculty of Engineering
+  "MECENG":          "eng",          //  Mechanical Engineering  Faculty of Engineering
+  "LAWCOMMKTG":      "law",          //  Communications and Marketing  Faculty of Law
+  "LAWDEP":          "law",          //  Law Faculty of Law
+  "LAWFAC":          "law",          //  Law Faculty of Law
+  "LAWFACSERV":      "law",          //  Facilities and Services Faculty of Law
+  "LAWGRPSERV":      "law",          //  Group Services  Faculty of Law
+  "LAWOPADMIN":      "law",          //  Operations Administration Faculty of Law
+  "LAWSASE":         "law",          //  Student Acad Services & Enggmt  Faculty of Law
+  "ACSRESEA":        "fmhs",         //  Auckland Cancer Research  Faculty of Medical & Hlth Sci
+  "ANAESTH":         "fmhs",         //  Anaesthesiology Faculty of Medical & Hlth Sci
+  "ANATOM":          "fmhs",         //  Anatomy and Medical Imaging Faculty of Medical & Hlth Sci
+  "AUDIOCLIN":       "fmhs",         //  Audiology Clinic  Faculty of Medical & Hlth Sci
+  "AUDIOL":          "fmhs",         //  Audiology Faculty of Medical & Hlth Sci
+  "BRAINRSH":        "fmhs",         //  Brain Research New Zealand  Faculty of Medical & Hlth Sci
+  "CLINSCI":         "fmhs",         //  SoM Management  Faculty of Medical & Hlth Sci
+  "CMHSE":           "fmhs",         //  Cent Medical & Hlth Sci Educat  Faculty of Medical & Hlth Sci
+  "EPIBIO":          "fmhs",         //  Epidemiology & Biostatistics  Faculty of Medical & Hlth Sci
+  "FHMSADMIN":       "fmhs",         //  Faculty Admin Faculty of Medical & Hlth Sci
+  "FHMSSERV":        "fmhs",         //  FMHS Education  Faculty of Medical & Hlth Sci
+  "GENPRAC":         "fmhs",         //  Gen.Practice& Primary Hlthcare  Faculty of Medical & Hlth Sci
+  "HEALTHSYS":       "fmhs",         //  Health Systems  Faculty of Medical & Hlth Sci
+  "MAORIHLTH":       "fmhs",         //  Te Kupenga Hauora Maori Faculty of Medical & Hlth Sci
+  "MAORIRES":        "fmhs",         //  Maori Health Research Faculty of Medical & Hlth Sci
+  //"MATHS":         "fmhs",         //  Mathematics Faculty of Medical & Hlth Sci (duplicate key)
+  "MEDADMDEPT":      "fmhs",         //  Faculty Admin Faculty of Medical & Hlth Sci
+  "MEDADMIN":        "fmhs",         //  Faculty Administration FMHS Faculty of Medical & Hlth Sci
+  "MEDADMSERV":      "fmhs",         //  Support Services  Faculty of Medical & Hlth Sci
+  "MEDCOMMKTG":      "fmhs",         //  Communications and Marketing  Faculty of Medical & Hlth Sci
+  "MEDDEP":          "fmhs",         //  Medicine  Faculty of Medical & Hlth Sci
+  "MEDFAC":          "fmhs",         //  Medical and Health Sciences Faculty of Medical & Hlth Sci
+  "MEDFACSERV":      "fmhs",         //  Facilities and Services Faculty of Medical & Hlth Sci
+  "MEDFINANCE":      "fmhs",         //  Finance Faculty of Medical & Hlth Sci
+  "MEDGRPSERV":      "fmhs",         //  Group Services  Faculty of Medical & Hlth Sci
+  "MEDINFOSER":      "fmhs",         //  Information Services  Faculty of Medical & Hlth Sci
+  "MEDOPADMIN":      "fmhs",         //  Operations Administration Faculty of Medical & Hlth Sci
+  "MEDSASE":         "fmhs",         //  Student Acad Services & Enggmt  Faculty of Medical & Hlth Sci
+  "MEDSCI":          "fmhs",         //  Medical Sciences  Faculty of Medical & Hlth Sci
+  "MOLMED":          "fmhs",         //  Molecular Medicine & Pathology  Faculty of Medical & Hlth Sci
+  "NURSING":         "fmhs",         //  Nursing Faculty of Medical & Hlth Sci
+  "NUTRITION":       "fmhs",         //  Nutrition Faculty of Medical & Hlth Sci
+  "OBSGYN":          "fmhs",         //  Obstetrics and Gynaecology  Faculty of Medical & Hlth Sci
+  "ONCOLOGY":        "fmhs",         //  Oncology  Faculty of Medical & Hlth Sci
+  "OPHTHAL":         "fmhs",         //  Ophthalmology Faculty of Medical & Hlth Sci
+  "OPTOM":           "fmhs",         //  Optometry and Vision Science  Faculty of Medical & Hlth Sci
+  "PACIFIHEAL":      "fmhs",         //  Pacific Health  Faculty of Medical & Hlth Sci
+  "PAED":            "fmhs",         //  Paediatrics Child & Youth Hlth  Faculty of Medical & Hlth Sci
+  "PHARMACOLO":      "fmhs",         //  Pharmacology  Faculty of Medical & Hlth Sci
+  "PHARMACY":        "fmhs",         //  Pharmacy  Faculty of Medical & Hlth Sci
+  "PHYCHC":          "fmhs",         //  Centre for Brain Research Faculty of Medical & Hlth Sci
+  "PHYSGY":          "fmhs",         //  Physiology  Faculty of Medical & Hlth Sci
+  "POPHLTH":         "fmhs",         //  Population Health Faculty of Medical & Hlth Sci
+  "PSYCHMED":        "fmhs",         //  Psychological Medicine  Faculty of Medical & Hlth Sci
+  "SCHMED":          "fmhs",         //  School of Medicine  Faculty of Medical & Hlth Sci
+  "SOLCOMH":         "fmhs",         //  Social and Community Health Faculty of Medical & Hlth Sci
+  "SOPHAD":          "fmhs",         //  Population Hlth Administration  Faculty of Medical & Hlth Sci
+  "SOPHADMN":        "fmhs",         //  SOPH Administration Faculty of Medical & Hlth Sci
+  "SOPHTECH":        "fmhs",         //  Population Hlth Tchg Admin  Faculty of Medical & Hlth Sci
+  "SOUTHAUCK":       "fmhs",         //  South Auckland Clinical School  Faculty of Medical & Hlth Sci
+  "SURGY":           "fmhs",         //  Surgery Faculty of Medical & Hlth Sci
+  "TKHMTEACH":       "fmhs",         //  TKHM Teaching Faculty of Medical & Hlth Sci
+  "TUMUAKI":         "fmhs",         //  Office of Tumuaki Faculty of Medical & Hlth Sci
+  "UNICLINICS":      "fmhs",         //  University Clinics  Faculty of Medical & Hlth Sci
+  "VISION2020":       "fmhs",        //  Vision 2020 Service Faculty of Medical & Hlth Sci
+  "WAIKATO":         "fmhs",         //  Waikato Clinical school Faculty of Medical & Hlth Sci
+  "CHEM":            "science",      //  Chemical Sciences Faculty of Science
+  "COMSCI":          "science",      //  Computer Science  Faculty of Science
+  "ENV":             "science",      //  Environment Faculty of Science
+  "LEIGH":           "science",      //  Marine Science  Faculty of Science
+  "MATHS":           "science",      //  Mathematics Faculty of Science
+  "MWILKINS":        "science",      //  Maurice Wilkins Centre  Faculty of Science
+  //"OBSGYN":        "science",      //  Obstetrics and Gynaecology  Faculty of Science (Duplicate with FMHS)
+  "PHYSICS":         "science",      //  Physics Faculty of Science
+  "PSYCHOL":         "science",      //  Psychology  Faculty of Science
+  "SBS":             "science",      //  Biological Sciences Faculty of Science
+  "SCICOMMKTG":      "science",      //  Communications and Marketing  Faculty of Science
+  "SCIFAC":          "science",      //  Science Faculty of Science
+  "SCIFACADMN":      "science",      //  Science Admin Faculty of Science
+  "SCIFACSERV":      "science",      //  Facilities and Services Faculty of Science
+  "SCIFINANCE":      "science",      //  Finance Faculty of Science
+  "SCIGRPSERV":      "science",      //  Group Services  Faculty of Science
+  "SCIINFOSER":      "science",      //  Information Services  Faculty of Science
+  "SCIOPADMIN":      "science",      //  Operations Administration Faculty of Science
+  "SCIRSRCH":        "science",      //  Science Research  Faculty of Science
+  "SCISASE":         "science",      //  Student Acad Services & Enggmt  Faculty of Science
+  "SPORTS":          "science",      //  Exercise Sciences Faculty of Science
+  "SPORTSCLIN":      "science",      //  Health And Performance  Faculty of Science
+  "STATS":           "science",      //  Statistics  Faculty of Science
+  "TPMCOMPSYS":      "science",      //  Te Punaha Matatini  Faculty of Science
+  "FINADMIN":        null,           //  Financial Services  Finance
+  "FINANCE":         null,           //  Finance Finance
+  "RISK":            null,           //  Performance & Risk Coord  Finance
+  "SHSERVOTH":       null,           //  Shared Financial Services Finance
+  "SHTRNCTR":        null,           //  Shared Transaction Centre Finance
+  "STRATPROCU":      null,           //  Strategic Procurement Finance
+  "HRADVISORY":      null,           //  HR Advisory Human Resources
+  "HRHLTHSAFE":      null,           //  Health and Safety Human Resources
+  "HROPER":          null,           //  HR Services Human Resources
+  //"HRTLNTRCRT":    null,           //  Talent and Recruitment  Human Resources (duplicate key)
+  "HUMRES":          null,           //  Human Resources Human Resources
+  "SODU":            null,           //  People & Organisational Devlpt  Human Resources
+  "APPSENG":         null,           //  Applications Engineering  Information Technology Serv.
+  "BI&APPS":         null,           //  BI and Applications Information Technology Serv.
+  "BSOLT":           null,           //  Business Solution Technologies  Information Technology Serv.
+  "CUSTSERV":        null,           //  Level 2 IT Service Operations Information Technology Serv.
+  "DATACENTRE":      null,           //  Data Centre Operations  Information Technology Serv.
+  "EUSERINFRA":      null,           //  EndUser Support Infrastructure  Information Technology Serv.
+  "EUSERSERV":       null,           //  End User Services Information Technology Serv.
+  "ITACCTG":         null,           //  Academic & Collaborative Tech Information Technology Serv.
+  "ITACT":           null,           //  IT Academic Support Information Technology Serv.
+  "ITAPPSUPP":       null,           //  Level 2 Application Support Information Technology Serv.
+  "ITAS":            null,           //  Academic Support  Information Technology Serv.
+  "ITBIRPT":         null,           //  BI and Reporting  Information Technology Serv.
+  "ITCRM":           null,           //  CRM Systems Information Technology Serv.
+  "ITDIGEXP":        null,           //  Digital Experience  Information Technology Serv.
+  "ITF&RS":          null,           //  Financial and Research Systems  Information Technology Serv.
+  "ITGADEVQA":       null,           //  App Dev and QA  Information Technology Serv.
+  "ITGASAS":         null,           //  Shared Application Services Information Technology Serv.
+  "ITINFRA":         null,           //  Infrastructure  Information Technology Serv.
+  "ITINFRATSG":      null,           //  Infrastructure & Tech Services  Information Technology Serv.
+  "ITMSSERV":        null,           //  Microsoft Server Support  Information Technology Serv.
+  "ITOPSSEC":        null,           //  Operation Security  Information Technology Serv.
+  "ITPLATFORM":      null,           //  Platform Services Information Technology Serv.
+  "ITPMO":           null,           //  Project Management  Information Technology Serv.
+  "ITPSTST":         null,           //  Peoplesoft Technical Team Information Technology Serv.
+  "ITS":             null,           //  Information Technology Serv Information Technology Serv.
+  "ITSDIR":          null,           //  Directorate Information Technology Serv.
+  "ITSERVMGMT":      null,           //  Service Management  Information Technology Serv.
+  "ITSERVSUPP":      null,           //  Unix Server Support Information Technology Serv.
+  "ITSMS":           null,           //  Student Management Systems  Information Technology Serv.
+  "ITSTRESG":        null,           //  Strategy and Design Information Technology Serv.
+  "LESU":            null,           //  Learning Environment Support  Information Technology Serv.
+  "MEDIAPROD":       null,           //  Media Production  Information Technology Serv.
+  "NETOPS":          null,           //  Network Operations  Information Technology Serv.
+  "NETWORK":         null,           //  Network Infrastructure  Information Technology Serv.
+  "SERVMGMT":        null,           //  ITS Service Management  Information Technology Serv.
+  "STORAGEVM":       null,           //  VM and Storage Services Information Technology Serv.
+  "ICTRISK":         null,           //  Risk and Identity IT Strategy, Policy & Planning
+  "ITARCHIT":        null,           //  Enterprise Architecture IT Strategy, Policy & Planning
+  "ITSPP":           null,           //  IT Strategy, Policy & Planning  IT Strategy, Policy & Planning
+  "ACCESERV":        null,           //  Collections Libraries & Learning Services
+  "ACQUIST":         null,           //  Acquisitions  Libraries & Learning Services
+  "BINDOCS":         null,           //  Bindery and Off Campus  Libraries & Learning Services
+  "CAREERS":         null,           //  Career Devlpmt & Emp Services Libraries & Learning Services
+  "CATALOG":         null,           //  Metadata  Libraries & Learning Services
+  "CORPSERV":        null,           //  Corporate Services  Libraries & Learning Services
+  "FACSERV":         null,           //  Academic & Research Suppt Svcs  Libraries & Learning Services
+  "ICHELPDESK":      null,           //  IC Helpdesk Libraries & Learning Services
+  "LENDING":         null,           //  Lending Inter-Loan & Enq Srvcs  Libraries & Learning Services
+  "LIBAPDVSP":       null,           //  Lib Apps Dvlpmnt and Support  Libraries & Learning Services
+  "LIBARTS":         null,           //  Arts, Maori & Pacific Library Libraries & Learning Services
+  "LIBBNE":          null,           //  Business & Econ Info Serv Libraries & Learning Services
+  "LIBCAI":          null,           //  Creative Arts and Ind Lib Libraries & Learning Services
+  "LIBEDU":          null,           //  Education and Social Work Lib Libraries & Learning Services
+  "LIBENG":          null,           //  Engineering Library Libraries & Learning Services
+  "LIBFHMS":         null,           //  Medical and Health Science Lib  Libraries & Learning Services
+  "LIBGEO":          null,           //  Cartographic & Geospatial Libraries & Learning Services
+  "LIBLAW":          null,           //  Law Library Libraries & Learning Services
+  "LIBLRNSUPS":      null,           //  Learning Support Services Libraries & Learning Services
+  "LIBMAORI":        null,           //  Maori & Pasifika Services Libraries & Learning Services
+  "LIBMEDIA":        null,           //  Media Archives  Libraries & Learning Services
+  "LIBMPMUSC":       null,           //  Maori & Pacific Music Archives  Libraries & Learning Services
+  "LIBRARY":         null,           //  Libraries & Learning Services Libraries & Learning Services
+  "LIBRSHSUPS":      null,           //  Research Support Services Libraries & Learning Services
+  "LIBSCI":          null,           //  Science Information Services  Libraries & Learning Services
+  "LIBSYS":          null,           //  Library Systems Libraries & Learning Services
+  "LIBTAMAKI":       null,           //  Tamaki  Libraries & Learning Services
+  "LIBWEB":          null,           //  Library Web Libraries & Learning Services
+  "SERIALS":         null,           //  Serials Libraries & Learning Services
+  "SHORTLO":         null,           //  Reading List Services Libraries & Learning Services
+  "SPECOLL":         null,           //  Special Collections Libraries & Learning Services
+  "STULRNSVCS":      null,           //  Student Learning Services Libraries & Learning Services
+  "BETTERSTRT":      "liggins",      //  Better Start  Liggins Institute
+  "GRAVIDA":         "liggins",      //  Gravida Liggins Institute
+  "LIGGINS":         "liggins",      //  Liggins Institute Liggins Institute
+  //"MEDFINANCE":    "liggins",      //  Finance Liggins Institute (duplicate key)
+  "JHMRC":           "arts",         //  James Henare Research Centre  Maori
+  "MAORI":           "arts",         //  Maori Maori
+  "BPMO":            null,           //  Business Process Management Org Perf & Improvement
+  "ORGPERFIMP":      null,           //  Org Perf & Improvement  Org Perf & Improvement
+  "STAFFSECTR":      null,           //  Staff Service Centre  Org Perf & Improvement
+  "USPO":            null,           //  University Strategic Programme  Org Perf & Improvement
+  "VCSUP":           null,           //  Vice-Chancellor's Support Serv  Org Perf & Improvement
+  "OUTREACH":        null,           //  Outreach Services Other Academic Activities
+  "TFC":             null,           //  Tertiary Foundation Cert  Other Academic Activities
+  "DELNA":           null,           //  DELNA Other Academic Services
+  "UNIPRESS":        null,           //  Auckland University Press Other Academic Services
+  "PLANINFO":        null,           //  Planning and Information  Planning and Information
+  "PROPSERV":        null,           //  Property Services Property Services
+  "PSCOMM":          null,           //  Commercial  Property Services
+  "PSENVTSUST":      null,           //  Environment & Sustainability  Property Services
+  "PSFACMGMT":       null,           //  Facilities Management Property Services
+  "PSPLNCPPRO":      null,           //  Planning & Capital Projects Property Services
+  "ETHICSCOMM":      null,           //  Ethics Committees Research Office
+  "GRRSHANTCS":      null,           //  Growth & Research Analytics Research Office
+  "POSTAWARD":       null,           //  Post Award Support Services Research Office
+  "PREAWARD":        null,           //  Pre Award Support Services  Research Office
+  "RESEARADMN":      null,           //  Research Office Research Office
+  "SCGRACENT":       null,           //  Graduate Centre School of Graduate Studies
+  "SCHGRAD":         null,           //  School of Graduate Studies  School of Graduate Studies
+  "ALUMNI":          null,           //  Alumni Relations & Development  Strategic Engagement
+  "AUCKINTER":       null,           //  International Office  Strategic Engagement
+  "CONFUCIUS":       null,           //  Confucius Institute Strategic Engagement
+  "STRATENG":        null,           //  Strategic Engagement  Strategic Engagement
+  "VCO":             null,           //  Office of the Vice-Chancellor Strategic Engagement
+  "TAMAKI":          null,           //  Tamaki  Tamaki
+//UniServices groupings
+  "AULABI":          "abi",          //  AUL Bioengineering Institute  UniServices
+  "AULACSRES":       "fmhs",         //  AUL Auckland Cancer Research  UniServices
+  "AULALSL":         "arts",         //  AUL App Lang Studies and Ling UniServices
+  "AULANATOM":       "fmhs",         //  AUL Anatomy UniServices
+  "AULANTHRO":       "arts",         //  AUL Anthropology  UniServices
+  "AULARCHPLN":      "nicai",        //  AUL Architecture and Planning UniServices
+  "AULAUDIOL":       "fmhs",         //  AUL Audiology UniServices
+  "AULBIICT":        null,           //  Business Improvements & ICT UniServices
+  "AULBUSINES":      "business",     //  Business  UniServices
+  "AULCAMRI":        "fmhs",         //  Centre for Advanced MRI UniServices
+  "AULCHEM":         "science",      //  AUL Chemical Sciences UniServices
+  "AULCHEMAT":       "eng",          //  AUL Chemical and Materials Eng  UniServices
+  "AULCIVENV":       "eng",          //  AUL Civil & Environmental Eng UniServices
+  "AULCMHSE":        "fmhs",         //  AUL FMHS Education  UniServices
+  "AULCOMSCI":       "science",      //  AUL Computer Science  UniServices
+  "AULCONECT":       null,           //  Conectus  UniServices
+  "AULCONTADM":      null,           //  Contract Administration UniServices
+  "AULCONTMGT":      null,           //  Contract Management UniServices
+  "AULCURRPD":       "edu",          //  AUL Curriculum and Pedagogy UniServices
+  "AULECE":          "eng",          //  AUL Electrical & Computer Eng UniServices
+  "AULECON":         "business",     //  AUL Economics UniServices
+  "AULEDADMN":       "edu",          //  AUL Edu and Social Work Admin UniServices
+  "AULEDUFAC":       "edu",          //  AUL Education and Social Work UniServices
+  "AULELA":          null,           //  English Language Academy  UniServices
+  "AULENGFAC":       "eng",          //  AUL Engineering UniServices
+  "AULENGSCI":       "eng",          //  AUL Engineering Science UniServices
+  "AULENV":          "science",      //  AUL Environment UniServices
+  "AULEPIBIO":       "fmhs",         //  AUL Epidemiology & Biostats UniServices
+  "AULFINANCE":      null,           //  Uniservices Finance UniServices
+  "AULGENPRAC":      "fmhs",         //  AUL Gen Prac and Prim HlthCare  UniServices
+  "AULGOVT":         null,           //  Government  UniServices
+  "AULGROWUP":       null,           //  Growing up in New Zealand UniServices
+  "AULHLTHSYS":      null,           //  AUL Health Systems  UniServices
+  "AULHNU":          null,           //  Human Nutrition Unit  UniServices
+  "AULILEP":         null,           //  Intl Lang Exchng and Pathways UniServices
+  "AULIMAC":         null,           //  Immunisation Advisory Centre  UniServices
+  "AULINTERNA":      null,           //  International UniServices
+  "AULLEIGH":        "science",      //  AUL Marine Science  UniServices
+  "AULLIGGINS":      "liggins",      //  AUL Liggins Institute UniServices
+  "AULLMRC":         "eng",          //  Light Metals Research Unit  UniServices
+  "AULLONGRSH":      null,           //  AUL Longitudinal Research UniServices
+  "AULLRNDVP":       null,           //  AUL Learning,Dev & Prof Prac  UniServices
+  "AULMAORI":        "fmhs",         //  AUL Maori UniServices
+  "AULMATHS":        "science",      //  AUL Mathematics UniServices
+  "AULMECENG":       "eng",          //  AUL Mechanical Engineering  UniServices
+  "AULMEDDEP":       "fmhs",         //  AUL Medicine  UniServices
+  "AULMEDFAC":       "fmhs",         //  AUL Medical & Health Sciences UniServices
+  "AULMEDSCI":       "fmhs",         //  AUL Medical Sciences  UniServices
+  "AULMOLMED":       "fmhs",         //  AUL Molecular Med & Pathology UniServices
+  "AULMRKTNG":       "business",     //  AUL Marketing UniServices
+  "AULNIHI":         "science",      //  Nat Inst of Health Innovation UniServices
+  "AULNURSING":      "fmhs",         //  AUL Nursing UniServices
+  "AULOBSGYN":       "fmhs",         //  AUL Obstetrics & Gynaecology  UniServices
+  "AULONCOL":        "fmhs",         //  AUL Oncology  UniServices
+  "AULOPHTHAL":      "fmhs",         //  AUL Ophthalmology UniServices
+  "AULPACIHLT":      "fmhs",         //  AUL Pacific Health  UniServices
+  "AULPAED":         "fmhs",         //  AUL Paediatrics Child & Youth UniServices
+  "AULPEOCULT":      null,           //  People and Culture  UniServices
+  "AULPHARMAC":      "fmhs",         //  AUL Pharmacy  UniServices
+  "AULPHARMCO":      "fmhs",         //  AUL Pharmacol & Clinical Pharm  UniServices
+  "AULPHYSICS":      "science",      //  AUL Physics UniServices
+  "AULPROJOPS":      null,           //  Project Operations Team UniServices
+  "AULPSYCHMD":      "fmhs",         //  AUL Psychological Medicine  UniServices
+  "AULPSYCHOL":      "science",      //  AUL Psychology  UniServices
+  "AULREADREC":      null,           //  Reading Recovery  UniServices
+  "AULSBS":          "science",      //  AUL Biological Sciences UniServices
+  "AULSCHMED":       "fmhs",         //  AUL School of Medicine  UniServices
+  "AULSOLCOMH":      "fmhs",         //  AUL Social  & Community Health  UniServices
+  "AULSPORTS":       "science",      //  AUL Sport and Exercise Science  UniServices
+  "AULSTATS":        "science",      //  AUL Statistics  UniServices
+  "AULSURGY":        "fmhs",         //  AUL Surgery UniServices
+  "AULTAHA":         null,           //  TAHA  UniServices
+  "AULTECHDEV":      null,           //  Technology Development  UniServices
+  "AULTPDL":         null,           //  Teacher Prof Dev Languages  UniServices
+  "AULUACEL":        null,           //  Ctr for Educational Leadership  UniServices
+  "AULUNIMGT":       null,           //  UniServices Management  UniServices
+  "AULWAIKATO":      null,           //  AUL Waikato Clinical School UniServices
+  "AULWERO":         null,           //  WERO  UniServices
+  "AULWERRYCE":      null,           //  Werry Workforce Wharaurau UniServices
+  "AULWHAKAWH":      null,           //  Whakawhetu  UniServices
+  "UNISERV":         null,           //  UniServices UniServices
+  "ACADQUAL":        null,           //  Academic Quality  University Management
+  "UNIMAN":          null            //  University Management University Management
+}
+

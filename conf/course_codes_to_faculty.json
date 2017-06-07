@@ -1,0 +1,207 @@
+{
+  "ACADENG":        "arts",         //  Academic English Studies
+  "ACADPRAC":       "edu",          //  Academic Practice
+  "ACCTG":          "business",     //  Accounting and Finance  Faculty of Business & Economic
+  "ANAESTHE":       "fmhs",         //  Anaesthesiology Faculty of Medical & Hlth Sci
+  "ANATOMY":        "fmhs",         //  Anatomy and Medical Imaging Faculty of Medical & Hlth Sci
+  "ANCHIST":        "arts",         //  Classics & Ancient History  Faculty of Arts
+  "ANTHRO":         "arts",         //  Anthropology  Faculty of Arts
+  "APLINGST":       "arts",         //  ? Applied Linguistics ?
+  "ARCHDES":        "nicai",        //  Architecture Design
+  "ARCHHTC":        "nicai",        //  Architecture History
+  "ARCHDRC":        "nicai",        //  Architecture Media
+  "ARCHPRM":        "nicai",        //  Architecture Professional Studies
+  "ARCHTECH":       "nicai",        //  Architecture Technology      
+  "ARCHGEN":        "nicai",        //  Architecture General
+  "ARTHIST":        "arts",         //  Art History Faculty of Arts
+  "ASIAN":          "arts",         //  Asian Studies Faculty of Arts
+  "AUDIOL":         "fmhs",         //  Audiology Faculty of Medical & Hlth Sci
+  "BSTHEO":         "arts",         //  Biblical Studies
+  "BEHAVSCI":       "fmhs",         //  Behavioural Science
+  "BIOENG":         "abi",          //  Bioengineering Institute  Bioengineering Institute
+  "BIOINF":         "science",      //  BioInfomatics
+  "BIOMED":         "science",      //  Biomedical Science
+  "BIOMENG":        "eng",          //  Biomedical Engineering
+  "BIOSCI":         "science",      //  Biological Sciences Faculty of Science
+  "BIOSEC":         "science",      //  Biosecurity and Conservation
+  "BTECH":          "science",      //  Biotechnology Projects
+  "BUSINESS":       "business",     //  Business
+  "BUSACT":         "business",     //  Business Accounting
+  "BUSADMIN":       "business",     //  Business Administration
+  "BUSINT":         "business",     //  Business International
+  "BUSMGT":         "business",     //  Business Management
+  "CHEM":           "science",      //  Chemical Sciences Faculty of Science
+  "CHEMMAT":        "eng",          //  Chemical and Materials Eng  Faculty of Engineering
+  "CHINESE":        "arts",         //  Asian Studies Faculty of Arts
+  "CTHTHEO":        "arts",         //  Christian Thought and History
+  "CIVIL":          "eng",          //  Civil and Environmental Eng Faculty of Engineering
+  "CLASSICS":       "arts",         //  Classical studies
+  "CLINED":         "fmhs",         //  Clinical Education
+  "CLINIMAG":       "fmhs",         //  Clinical Imaging
+  "COMHLTH":        "fmhs",
+  "COMLAW":         "business",     //  Commercial Law  Faculty of Business & Economic
+  "COMENT":         "business",     //  Commercialisation and Entrepreneurship
+  "COMPLIT":        "arts",         //  Comparative Literature
+  "COMPSCI":        "science",      //  Computer Science  Faculty of Science
+  "COMPSYS":        "eng",          //  Comuputer Systems Engineering
+  "COOKIS":         "arts",         //  Cook Islands Maori
+  "CREWRIT":        "arts",         //  Creative Writing
+  "CRIM":           "arts",         //  Criminology
+  "DANCE":          "nicai",        //  Dance Studies Programme Faculty Creative Arts & Indust
+  "DEVELOP":        "arts",         //  Development Studies
+  "DIETETIC":       "fmhs",         //  Dietetics
+  "DISABLTY":       "edu",          //  Disability Studies
+  "DRAMA":          "arts",         //  Drama
+  "ECON":           "business",     //  Economics Faculty of Business & Economic
+  "EDUC":           "edu",          //  Education and Social Work Faculty of Educ Social Work
+  "EDCURRM":        "edu",          //  Education Curriculum Maori
+  "EDCURRPK":       "edk",          //  Education Curriculum Pasifika
+  "EDCURSEC":       "edu",          //  Education Curriculum Secondary Diploma
+  "EDCURRIC":       "edu",          //  Education Curriculum Studies
+  "EDFOUND":        "edu",          //  Education Foundation
+  "EDFOUNDM":       "edu",          //  Education Foundation Maori
+  "EDUCM":          "edu",          //  Education Maori
+  "EDPRAC":         "edu",          //  Education Practice
+  "EDPRACM":        "edu",          //  Education Practice Maori
+  "EDPRACPK":       "edu",          //  Education Practice Pasifika
+  "EDPROF":         "edu",          //  Education Professional
+  "EDPROFST":       "edu",          //  Education Professional Studies
+  "EDPROFM":        "edu",          //  Education Professional Studies Maori
+  "EDPROFPK":       "edu",          //  Education Professional Studies Pasifika
+  "EDSPEC":         "edu",          //  Education Special
+  "ELECTENG":       "eng",          //  Electrical and Electronic Engineering
+  "ENERGY":         "eng",          //  Energy
+  "ENGGEN":         "eng",          //  Engineering General
+  "ENGLISH":        "arts",         //  English Drama & WritingStudies  Faculty of Arts
+  "ENGLACP":        "arts",         //  English for academic purposes
+  "ENGWRIT":        "arts",         //  English Writing
+  "ENGSCI":         "eng",          //  Engineering Science Faculty of Engineering
+  "ENVENG":         "eng",          //  Environmental Engineering
+  "ENVMGT":         "science",      //  Environmental Management
+  "ENVSCI":         "science",      //  Environmental Science
+  "EUROPEAN":       "arts",         //  European Lang and Literature  Faculty of Arts
+  "EXERSCI":        "science",      //  Exercise Sciences Faculty of Science
+  "FINANCE":        "business",     //  Finance Faculty of Business & Economic
+  "FINMGMT":        "business",     //  Finance Graduate Programmes
+  "FINEARTS":       "nicai",        //  Fine Arts Faculty Creative Arts & Indust
+  "FOODSCI":        "science",      //  Food Science
+  "FORENSIC":       "science",      //  Forensic Science
+  "FRENCH":         "arts",         //  European Lang and Literature  Faculty of Arts
+  "FTVMS":          "arts",         //  Film, Television and Media Studies
+  "GENPRAC":        "fmhs",         //  Gen.Practice& Primary Hlthcare  Faculty of Medical & Hlth Sci
+  "GEOG":           "science",      //  Geography Environment Faculty of Science
+  "GEOLOGY":        "science",      //  Geology Environment Faculty of Science
+  "GEOPHYS":        "science",      //  Geophysics
+  "GEOTHERM":       "eng",          //  Energy Technology
+  "GERMAN":         "arts",         //  European Lang and Literature  Faculty of Arts
+  "GREEK":          "arts",         //  European Lang and Literature  Faculty of Arts
+  "HISTORY":        "arts",         //  History Faculty of Arts
+  "HLTHINFO":       "fmhs",         //  Health Informatics
+  "HLTHMGT":        "fmhs",         //  Health Management
+  "HLTHPSYC":       "fmhs",         //  Health Psycholog
+  "HLTHSCI":        "fmhs",         //  Health Sciences
+  "HRMGMT":         "business",     //  Human Resource Management
+  "HUMSERV":        "edu",          //  Human Services
+  "INFOMGMT":       "business",     //  Information Management
+  "INFOSYS":        "business",     //  Information Systems
+  "INFORM":         "business",     //  Information Systems Graduate Programme
+  "INNOVENT":       "business",     //  Innovation and Entreprenureship
+  "INTBUS":         "business",     //  International Business
+  "ITALIAN":        "arts",         //  European Lang and Literature  Faculty of Arts
+  "JAPANESE":       "arts",         //  Asian Studies Faculty of Arts
+  "KOREAN":         "arts",         //  Asian Studies Faculty of Arts
+  "LANGTCHG":       "arts",         //  Language Teaching and Learning
+  "LANGLIT":        "arts",         //  Language Literature
+  "LATIN":          "arts",         //  European Lang and Literature  Faculty of Arts
+  "LATINAM":        "arts",         //  Latin American Studies
+  "LAW":            "law",          //  Law Faculty of Law
+  "LAWCOM":         "law",          //  Law Commercial
+  "LAWENVIR":       "law",          //  Law Environmental
+  "LAWGENRL":       "law",          //  Law General
+  "LAWHONS":        "law",          //  Law Honours
+  "LAWPUBL":        "law",          //  Law Public
+  "LINGUIST":       "arts",         //  App Lang Studies & Linguistics  Faculty of Arts
+  "LOGICOMP":       "arts",         //  Logic and Computation
+  "MANAGEMT":       "business",     //  MMgt/PGDipBus
+  "MAORI":          "arts",         //  Maori Maori
+  "MAORIDEV":       "business",     //  Maori Development
+  "MAORIHTH":       "fmhs",         //  Maori Health
+  "MARINE":         "science",      //  Marine Science  Faculty of Science
+  "MARKET":         "business",     //  Marketing Graduate Programmes
+  "MATHS":          "science",      //  Mathematics Faculty of Science
+  "MATHSED":        "edu",          //  Math Education
+  "MBCHB":          "fmhs",         //  MBChB ?
+  "MECHENG":        "eng",          //  Mechanical Engineering  Faculty of Engineering
+  "MECHTRON":       "eng",          //  Mechanical and Mechatronics
+  "MEDICINE":       "fmhs",         //  Medicine  Faculty of Medical & Hlth Sci
+  "MEDIMAGE":       "fmhs",         //  Anatomy and Medical Imaging Faculty of Medical & Hlth Sci
+  "MEDSCI":         "fmhs",         //  Medical Sciences  Faculty of Medical & Hlth Sci
+  "MEDEMS":         "arts",         //  Medieval and Early Modern European Studies
+  "MGMT":           "business",     //  Management and Employment Relations
+  "MKTG":           "business",     //  Marketing
+  "MOLMED":         "fmhs",         //  Molecular Medicine & Pathology  Faculty of Medical & Hlth Sci
+  "MPHEALTH":       "fmhs",         //  Maori and Pascific health
+  "MUS":            "nicai",        //  Music Faculty Creative Arts & Indust
+  "MUSIC":          "nicai",        //  Music Faculty Creative Arts & Indust
+  "MUSEUMS":        "arts",         //  Museums and Cultural heritage
+  "NEWVENT":        "business",     //  New Venture Management
+  "NURSING":        "fmhs",         //  Nursing Faculty of Medical & Hlth Sci
+  "OBSTGYN":        "fmhs",         //  Obstetrics and Gynaecology
+  "OPHTHALM":       "fmhs",         //  Ophthalmology Faculty of Medical & Hlth Sci
+  "OPSMGT":         "business",     //  Operations Management
+  "OPSMAN":         "business",     //  Operations Management Graduate Programmes
+  "OPSRES":         "business",     //  Operations Research
+  "OPSRESCH":       "business",     //         
+  "OPHTHAL":        "fmhs",         //  Opthalmology
+  "OPTOM":          "fmhs",         //  Optometry and Vision Science  Faculty of Medical & Hlth Sci
+  "PACIFIC":        "arts",         //  Pacific Studies Faculty of Arts
+  "PAEDS":          "fmhs",         //  Paediatrics
+  "PATHOL":         "fmhs",         //  Molecular Medicine & Pathology  Faculty of Medical & Hlth Sci
+  "PERFORM":        "nicai",        //  Performing Arts
+  "PHARMACY":       "fmhs",         //  Pharmacy  Faculty of Medical & Hlth Sci
+  "PHARMCOL":       "fmhs",         //  Pharmacology
+  "PHIL":           "arts",         //  Philosophy  Faculty of Arts
+  "PHYSICS":        "science",      //  Physics Faculty of Science
+  "PHYSIOL":        "fmhs",         //  Physiology  Faculty of Medical & Hlth Sci
+  "PLANNING":       "nicai",        //  Planning
+  "POLICY":         "arts",         //  Public Policy
+  "POLITICS":       "arts",         //  Political Studies Politics & International Relns  Faculty of Arts
+  "POLYMER":        "science",      //  Polymers and Coatings Science
+  "POPLHLTH":       "fmhs",         //  Population Health
+  "POPLPRAC":       "fmhs",         //  Population Health Practice
+  "PROFCOUN":       "edu",          //  Professional counselling
+  "PROFSUPV":       "edu",          //  Professional Supervision
+  "PROPERTY":       "business",     //  Property  Faculty of Business & Economic
+  "PTHEO":          "arts",         //  Practical Theology
+  "PSYCH":          "science",      //  Psychology  Faculty of Science
+  "PSYCHIAT":       "fmhs",         //  Psychiatry
+  "RUSSIAN":        "arts",         //  Russian
+  "SAMOAN":         "arts",         //  Samoan
+  "SCIENT":         "science",      //  Science Enterprise
+  "SCIGEN":         "science",      //  Science General
+  "SCREEN":         "arts",         //  Screen Production
+  "SOCSCIPH":       "arts",         //  Social Science for Public Health
+  "SOCSCRES":       "arts",         //  Social Science Research Methods
+  "SOCWORK":        "edu",          //  Social Work
+  "SOCCHFAM":       "edu",          //  Social Work Child and Family Practice
+  "SOCYOUTH":       "edu",          //  Social Work Youth Practice
+  "SOCHLTH":        "edu",          //  Social Work Health Practice
+  "SOCIOL":         "arts",         //  Sociology Faculty of Arts
+  "SOFTENG":        "eng",          //  Software Engineering
+  "SOUND":          "nicai",        //  Sound
+  "SPANISH":        "arts",         //  European Lang and Literature  Faculty of Arts
+  "SPCHSCI":        "science",      //  Speech Science
+  "SPORTSCI":       "science",      //  Exercise Sciences Faculty of Science
+  "STATS":          "science",      //  Statistics  Faculty of Science
+  "SURGERY":        "fmhs",         //  Surgery Faculty of Medical & Hlth Sci
+  "THEOLOGY":       "arts",         //  Theology  Faculty of Arts
+  "TONOGAN":        "arts",         //  Tongan
+  "TRANSLAT":       "arts",         //  Translation Studies
+  "URBDES":         "nicai",        //  Urban Design
+  "URBPLAN":        "nicai",        //  Urban Planning
+  "VISARTS":        "nicai",        //  Visual Arts
+  "WINESCI":        "science",      //  Wine Science
+  "WOMEN":          "arts",         //  Women's studies
+  "YOUTHWRK":       "edu"           //  Youth Work
+}
+
