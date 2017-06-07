@@ -1,2 +1,5 @@
 conf/auth.json
 conf/figshare_hr_key.json
+conf/test_figshare_hr_key.json
+user_xml_files/
+
