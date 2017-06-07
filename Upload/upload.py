@@ -3,7 +3,8 @@
 import requests
 import json
 
-FILE_NAME = '../user_xml_files/hr_feed_2017-06-06.xml'
+FILE_NAME_DEF = 'hr_file_to_upload.json'
+
 API_URL = 'https://api.figshare.com/v2/institution/hrfeed/upload'
 KEY_FILE = '../conf/figshare_hr_key.json'
 
@@ -11,6 +12,11 @@ with open(KEY_FILE) as json_file:
     json_data = json.load(json_file)
 
 TOKEN=json_data['hr_figshare_token']
+
+with open(FILE_NAME_DEF) as json_file:
+    json_data = json.load(json_file)
+
+FILE_NAME=json_data['filename']
 
 def main():
     headers = {"Authorization": "token " + TOKEN}
