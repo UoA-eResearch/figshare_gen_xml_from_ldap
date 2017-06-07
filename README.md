@@ -1,17 +1,25 @@
 # figshare_gen_xml_from_ldap
 Reads the UoA LDAP and generates an XML HR file to upload to Figshare.
 
-conf/academic_department_code_to_faculty.json maps academic department codes the department's faculty. 
-**Nb. There are a few departments in more than one faculty, so the primary one has been chosen.**
-**&nbsp;&nbsp;&nbsp;&nbsp;Also note that there are many non-academic department codes that get mapped to nil.**
+conf/academic_department_code_to_faculty.json maps academic department codes the department's faculty.
+
+* There are a few departments in more than one faculty, so the primary one has been chosen.
+* Also note that there are many non-academic department codes that get mapped to nil.
     
 conf/course_codes_to_faculty.json maps student course codes (papers) to a faculty
-**Nb. There are conflicts here too, so a primary faculty was chosen for each course.**
 
-Just execute 
+* There are conflicts here too, so a primary faculty was chosen for each course.
+
+conf/override_group.json is a list of people we want in specific groups, regardless of the LDAP grouping.
+ 
+* A null group is "" in this file, where in the others, it is null
+
+Just execute:
 ```
   run.rb
 ```
+and get a new XML file in the user_xml_files/ directory, called figshare_hr_feed_<Year-Month-Day>.xml
+This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
 
 conf/auth.json is of form
 ```
