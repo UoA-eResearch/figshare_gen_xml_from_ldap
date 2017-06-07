@@ -14,4 +14,4 @@ users_groups.each do |k,v|
   user_attributes[k][:primary_group] = (v.length == 1 ? v[0] : '') #Add in the faculty, which isn't in a users basic LDAP attributes.
 end
 #Generate the Figshare HR feed XML file from the collected attributes.
-gen_xml(users: user_attributes, filename: 'figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}')
+gen_xml(users: user_attributes, filename: "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml")
