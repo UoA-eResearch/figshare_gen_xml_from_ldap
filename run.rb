@@ -11,7 +11,8 @@ get_staff_groups(ldap: @ldap, users_groups: users_groups)
 #We need to query the LDAP for each users basic details.
 users_groups.each do |k,v|
   user_attributes[k] = get_user_attributies(ldap: @ldap, upi: k, attributes: {'cn' => :upi, 'sn' => :surname, 'givenname'=>:givenname, 'mail'=>:email, 'employeenumber'=>:uoa_id} )
-  user_attributes[k][:primary_group] = (v.length == 1 ? v[0] : '') #Add in the faculty, which isn't in a users basic LDAP attributes.
+  #Add in the faculty, which isn't in a users basic LDAP attributes.
+  user_attributes[k][:primary_group] = @override_group[k] != nil ? @override_group[k] : (v.length == 1 ? v[0] : '') 
 end
 #Generate the Figshare HR feed XML file from the collected attributes.
 gen_xml(users: user_attributes, filename: "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml")
