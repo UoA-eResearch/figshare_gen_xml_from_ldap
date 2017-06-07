@@ -24,7 +24,7 @@ end
 #  @param users [Hash] User records of form {:upi=>"aaaa001", :surname=>"Aaa Home Test", :givenname=>"Aaa", :email=>"", :uoa_id=>"4642721", :primary_group => ''}
 #  @param filename [String] File name to write Figshare HR feed to.
 def gen_xml(users:, filename: nil)
-  fd = file != nil ? File.open(filename,'w') : $stdout #default to STDOUT, though the output will be ~150,000 lines long.
+  fd = filename != nil ? File.open(filename,'w') : $stdout #default to STDOUT, though the output will be ~150,000 lines long.
   fd.puts "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
   fd.puts "<HRFeed>"
   users.each do |upi, attributes| #Enumerate through the user records.
