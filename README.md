@@ -28,6 +28,14 @@ conf/auth.json is of form
   "password": "the_password"    // the user's password goes here 
 }
 ```
+conf/figshare_hr_key.json holds the API key generated through the application menu on figshare.com
+We set up a dummy user in figshare, with admin rights, and assigned this key to the Hr Figshare user.
+```
+{
+  "hr_figshare_token": "xxxxxxxxxxxxxxxxxxxx..."
+}
+```
+
 
 Figshare XML is of the form
 ```
@@ -48,4 +56,7 @@ Figshare XML is of the form
 ```
 
 A null UserAssociationCriteria adds the user in at the UoA level of the Figshare hierarchy. I have set this field to null for anyone in multiple faculty, and for all non-academic staff.
+
+There are test versions of upload.py, with associated test keys, that talk to auckland.figsh.com.
+
 
