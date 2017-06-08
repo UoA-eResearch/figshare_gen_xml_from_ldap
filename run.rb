@@ -16,9 +16,14 @@ users_groups.each do |k,v|
 end
 #Generate the Figshare HR feed XML file from the collected attributes.
 new_filename = "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml"
+
+puts "Started run at #{Time.now}"
 gen_xml(users: user_attributes, filename: new_filename)
 
 #automate next file to upload for python script to consume.
+puts "Creating file #{new_filename}"
 File.open("Upload/hr_file_to_upload.json","w") do |fd|
-  puts "{\n\"filename\": \"../#{new_filename}\"\n}"
+  fd.puts "{\n\"filename\": \"../#{new_filename}\"\n}"
 end
+
+puts "Finished run at #{Time.now}"
