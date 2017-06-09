@@ -3,6 +3,8 @@ require_relative 'rlib/init.rb'
 require_relative 'rlib/gen_figshare_xml.rb'
 require_relative 'rlib/get_user_attributes.rb'
 
+puts "Started run at #{Time.now}"
+
 init #Connect to LDAP, and read the conf files.
 user_attributes = {} #We build up all the XML attributes for a user in this hash.
 users_groups = {}    #We fetch user faculty membership, by upi, in this hash.
@@ -17,7 +19,6 @@ end
 #Generate the Figshare HR feed XML file from the collected attributes.
 new_filename = "user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml"
 
-puts "Started run at #{Time.now}"
 gen_xml(users: user_attributes, filename: new_filename)
 
 #automate next file to upload for python script to consume.
