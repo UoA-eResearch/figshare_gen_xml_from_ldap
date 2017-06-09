@@ -59,4 +59,18 @@ A null UserAssociationCriteria adds the user in at the UoA level of the Figshare
 
 There are test versions of upload.py, with associated test keys, that talk to auckland.figsh.com.
 
+##Ubuntu
+
+Installing on Ubuntu, where python and ruby are packaged, I had to 
+```
+ apt-get install ruby-net-ldap
+ apt-get install python-requests
+```
+Also added figshare user to system and set up cron as that user.
+```
+adduser --system  --disabled-password --shell /bin/sh --group figshare figshare
+```
+
+
+
 
