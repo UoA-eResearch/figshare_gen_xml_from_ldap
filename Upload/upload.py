@@ -2,11 +2,17 @@
 
 import requests
 import json
+import os
+import sys
+import inspect
 
-FILE_NAME_DEF = 'hr_file_to_upload.json'
+filename = inspect.getframeinfo(inspect.currentframe()).filename
+path = os.path.dirname(os.path.abspath(filename))
+
+FILE_NAME_DEF = path + '/hr_file_to_upload.json'
 
 API_URL = 'https://api.figshare.com/v2/institution/hrfeed/upload'
-KEY_FILE = '../conf/figshare_hr_key.json'
+KEY_FILE = path + '/../conf/figshare_hr_key.json'
 
 with open(KEY_FILE) as json_file:
     json_data = json.load(json_file)
@@ -16,7 +22,7 @@ TOKEN=json_data['hr_figshare_token']
 with open(FILE_NAME_DEF) as json_file:
     json_data = json.load(json_file)
 
-FILE_NAME=json_data['filename']
+FILE_NAME=path + '/' + json_data['filename']
 
 def main():
     headers = {"Authorization": "token " + TOKEN}
