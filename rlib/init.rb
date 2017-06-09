@@ -11,6 +11,8 @@ def init
   @course_codes_to_faculty = load_json_file("#{File.dirname(__FILE__)}/../conf/course_codes_to_faculty.json")
   @academic_department_code_to_faculty  = load_json_file("#{File.dirname(__FILE__)}/../conf/academic_department_code_to_faculty.json")
   @override_group  = load_json_file("#{File.dirname(__FILE__)}/../conf/override_group.json")
+  @override_quota  = load_json_file("#{File.dirname(__FILE__)}/../conf/override_quota.json")
+  @default_quota = 1024 * 1024 * 1024
 
   @ldap = Net::LDAP.new  :host => "uoa.auckland.ac.nz", # your LDAP host name or IP goes here,
                         :port => "389", # your LDAP host port goes here,

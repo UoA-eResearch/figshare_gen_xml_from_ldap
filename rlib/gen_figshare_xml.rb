@@ -6,6 +6,7 @@
 #  @param email [String] email address
 #  @return [String] Single users XML record for Figshare HR feed
 def gen_user_xml(upi:, givenname:, surname:, uoa_id:, email:, primary_group:)
+  quota = @override_quota[upi] == nil ? @default_quota : @override_quota[upi]
   return <<-EOT
   <Record>
      <UniqueID>#{upi}@auckland.ac.nz</UniqueID>
@@ -13,11 +14,12 @@ def gen_user_xml(upi:, givenname:, surname:, uoa_id:, email:, primary_group:)
      <LastName>#{surname}</LastName>
      <Email>#{email}</Email>
      <IsActive>y</IsActive>
-     <UserQuota>10737418240</UserQuota>
+     <UserQuota>#{quota}</UserQuota>
      <UserAssociationCriteria>#{primary_group}</UserAssociationCriteria>
      <SymplecticUniqueID>#{uoa_id}</SymplecticUniqueID>
   </Record>
 EOT
+#<ForceQuotaUpdate>Y</ForceQuotaUpdate>
 end
 
 #gen_xml generates a Figshare HR xml feed file from a hash of all users in the feed.
