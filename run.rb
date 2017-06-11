@@ -5,6 +5,7 @@ require_relative 'rlib/get_user_attributes.rb'
 
 puts "Started run at #{Time.now}"
 
+@script_dir = File.dirname(__FILE__)
 init #Connect to LDAP, and read the conf files.
 user_attributes = {} #We build up all the XML attributes for a user in this hash.
 users_groups = {}    #We fetch user faculty membership, by upi, in this hash.
@@ -24,7 +25,7 @@ gen_xml(users: user_attributes, filename: new_filename)
 #automate next file to upload for python script to consume.
 puts "Creating file #{new_filename}"
 File.open("Upload/hr_file_to_upload.json","w") do |fd|
-  fd.puts "{\n\"filename\": \"../#{new_filename}\"\n}"
+  fd.puts "{\n\"filename\": \"#{@script_dir}/#{new_filename}\"\n}"
 end
 
 puts "Finished run at #{Time.now}"
