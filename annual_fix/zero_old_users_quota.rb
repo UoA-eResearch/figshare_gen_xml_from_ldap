@@ -6,7 +6,7 @@
 
 require 'nokogiri'
 require_relative '../rlib/init.rb'
-require_relative '../rlib/get_user_attributes.rb'
+#require_relative '../rlib/get_user_attributes.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
 
 def xml_to_hash(xml_data:, tag:)

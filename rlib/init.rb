@@ -1,3 +1,4 @@
+require 'net/ldap'
 require 'json'
 
 def load_json_file(filename)
