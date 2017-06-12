@@ -30,7 +30,9 @@ def test_phd_download(ldap:)
   puts "PhD download"
   users_groups = {}
   get_phd_groups(ldap: @ldap, users_groups: users_groups)
-  p users_groups
+  users_groups.each do |k,v|
+    puts "#{k} => #{v}"
+  end
   puts
 end
 
@@ -38,13 +40,18 @@ def test_staff_download(ldap:)
   puts "Staff download"
   users_groups = {}
   get_staff_groups(ldap: @ldap, users_groups: users_groups)
-  p users_groups
+  users_groups.each do |k,v|
+    puts "#{k} => #{v}"
+  end
   puts
 end
 
+@script_dir = File.dirname(__FILE__) + '/..'
+puts @script_dir
+
 init
-test_get_user_attributes(ldap: @ldap, upi: 'aaaa001')
-test_academic_department_code_to_faculty('CAIFACSERV')
-test_course_codes_to_faculty('COMPSCI')
+#test_get_user_attributes(ldap: @ldap, upi: 'aaaa001')
+#test_academic_department_code_to_faculty('CAIFACSERV')
+#test_course_codes_to_faculty('COMPSCI')
 #test_phd_download(ldap: @ldap)
 test_staff_download(ldap: @ldap)
