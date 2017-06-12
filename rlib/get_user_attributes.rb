@@ -12,6 +12,7 @@ def get_user_attributies(ldap:, upi:, attributes:)
     end
     return response #Only want the first entry. Not sure why there are two identical records per person
   end
+  return response #Catch all if ldap search fails to get a result.
 end
 
 #get_phd_groups retrieves all the PhD students (in 898 courses) with their faculty affiliation
