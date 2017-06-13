@@ -71,6 +71,11 @@ Also added figshare user to system and set up cron as that user.
 adduser --system  --disabled-password --shell /bin/sh --group figshare figshare
 ```
 
+##Annual Cleanup of old users
+We need to clean up old users, so once a year we need to update the annual_fix/zero_conf.json to specify a file from last year, and the current xml feed file. Then we run zero_old_users_quota_.rb to generate a diff xml file, with all the old users in it, and then run Upload/upload.py to update Figshare.
+
+ 
+
 
 
 
