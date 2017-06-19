@@ -43,7 +43,7 @@ end
 #  @param old_users [Nokigiri::] Parsed XML loaded from old user XML file
 #  @param current_users [Nokigiri::] Parsed XML loaded from current user XML file
 #  @param filename [String] File name to write Figshare HR feed to.
-def gen_old_users_xml(old_users:, current_users:, filename: nil)
+def gen_old_users_xml(old_users:, current_users:, filename: nil, get_uoa_id: false, active: true)
   fd = filename != nil ? File.open(filename,'w+') : $stdout #default to STDOUT, though the output will be ~150,000 lines long.
   fd.puts "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
   fd.puts "<HRFeed>"
@@ -52,6 +52,12 @@ def gen_old_users_xml(old_users:, current_users:, filename: nil)
       attributes[:primary_group] = 'unassociated'
       attributes[:quota] = 0
       attributes[:force_quota_update] = true
+      attributes[:active] = active
+      if get_uoa_id
+        #We need to query the LDAP for each users basic details.
+        user_attributes = get_user_attributies(ldap: @ldap, upi: upi, attributes: {'cn' => :upi, 'employeenumber'=>:uoa_id} )
+        attributes[:uoa_id] = user_attributes[:uoa_id]
+      end
       fd.puts gen_user_xml(attributes) #attributes passed as a Ruby hash, rather than individually.
     end
   end
