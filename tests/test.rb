@@ -46,6 +46,47 @@ def test_staff_download(ldap:)
   puts
 end
 
+def testing_get_groups(ldap:, users_groups:, staff: true)
+  if staff
+    filter = Net::LDAP::Filter.eq( "objectCategory","group" ) & Net::LDAP::Filter.eq("cn","*.staff.uos")
+    treebase = "dc=UoA,dc=auckland,dc=ac,dc=nz"
+  else
+    filter = Net::LDAP::Filter.eq( "objectCategory","group" ) & Net::LDAP::Filter.eq("cn","*phd*.now")
+    treebase = "OU=now,OU=Groups,dc=UoA,dc=auckland,dc=ac,dc=nz"
+  end
+
+  ldap.search( :base => treebase, :filter => filter, :attributes => ['member'] ) do |entry|
+=begin
+#Raw dump, to see what is in the LDAP.
+    puts "DN: #{entry.dn}"
+    entry.each do |attribute, values|
+      puts "   #{attribute}:"
+      values.each do |value|
+        puts "      --->#{value}"
+      end
+    end
+=end
+begin
+    #eg CN=SCIFAC.staff.uos,OU=uos,OU=Groups,DC=UoA,DC=auckland,DC=ac,DC=nz
+    group = entry.dn.split(',')[0].split('=')[1].split('.')[0]
+    entry.each do |attribute, values|
+      if attribute =~ /^member/ #Getting empty member attributes, and new attribute: member;range=0-1499 for SCIFAC and MEDFAC.
+        values.each do |value|
+          member = value.split('=')[1].split(',')[0]
+          users_groups[member] ||= []    #If this is the users first group, then create an Array
+          #Add this group to this users group Array, only if group not already in Array
+          if staff && (faculty = @academic_department_code_to_faculty[group]) != nil && users_groups[member].include?(faculty) == false
+            users_groups[member] << faculty 
+          elsif (faculty = @course_codes_to_faculty[group]) != nil && users_groups[member].include?(faculty) == false
+            users_groups[member] << faculty 
+          end
+        end
+      end
+    end  
+end
+  end
+end
+
 @script_dir = File.dirname(__FILE__) + '/..'
 puts @script_dir
 
@@ -54,4 +95,10 @@ init
 #test_academic_department_code_to_faculty('CAIFACSERV')
 #test_course_codes_to_faculty('COMPSCI')
 #test_phd_download(ldap: @ldap)
-test_staff_download(ldap: @ldap)
+#test_staff_download(ldap: @ldap)
+
+#users = {}
+#testing_get_groups(ldap: @ldap, users_groups: users)
+#testing_get_groups(ldap: @ldap, users_groups: users, staff: false)
+#puts users.length
+#users.each { |u,v| puts "#{u} => #{v}"}
