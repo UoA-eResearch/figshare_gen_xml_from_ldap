@@ -8,7 +8,11 @@ def get_user_attributies(ldap:, upi:, attributes:)
   treebase = 'OU=People,DC=UoA,DC=auckland,DC=ac,DC=nz' #restrict output, otherwise we get a third user record.
   ldap.search( :base => treebase, :filter => filter, :attributes => ['cn','sn','givenname','mail','employeenumber'] ) do |entry|
     attributes.each do |attribute,value|
-      response[value] = entry[attribute][0].to_s.strip
+      if value == :email #Horrible hack, as we are still getting the odd user_gal email address.
+        response[value] = entry[attribute][0].to_s.strip.gsub(/_gal@/, '@')
+      else
+        response[value] = entry[attribute][0].to_s.strip
+      end
     end
     return response #Only want the first entry. Not sure why there are two identical records per person
   end
