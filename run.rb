@@ -3,6 +3,16 @@ require_relative 'rlib/init.rb'
 require_relative 'rlib/gen_figshare_xml.rb'
 require_relative 'rlib/get_user_attributes.rb'
 
+#Ensure we have the upload user in the feed
+FIGSHARE_HR = {
+  :upi => "figshare_hr",
+  :givenname => 'Hr',
+  :surname => "Figshare",
+  :email => "figshare@auckland.ac.nz",
+  :primary_group => '',
+  :uoa_id => ''
+}
+
 puts "Started run at #{Time.now}"
 
 @script_dir = File.dirname(__FILE__)
@@ -19,6 +29,8 @@ users_groups.each do |k,v|
   #Add in the faculty, which isn't in a users basic LDAP attributes.
   user_attributes[k][:primary_group] = @override_group[k] != nil ? @override_group[k] : (v.length == 1 ? v[0] : '')
 end
+#Add upload user.
+user_attributes[FIGSHARE_HR[:upi]] = FIGSHARE_HR
 
 #Generate the Figshare HR feed XML file from the collected attributes.
 new_filename = "#{@script_dir}/user_xml_files/figshare_hr_feed_#{Time.now.strftime("%Y-%m-%d")}.xml"
