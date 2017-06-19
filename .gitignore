@@ -4,4 +4,6 @@ conf/test_figshare_hr_key.json
 user_xml_files/
 Upload/test_hr_file_to_upload.json
 Upload/hr_file_to_upload.json
+figshare_cleanup/auckland_2017-06-17_HR_dump_from_Figshare.csv
+annual_fix/zero_conf.json
 
