@@ -7,8 +7,8 @@
 
 require 'nokogiri'
 require_relative '../rlib/init.rb'
-#require_relative '../rlib/get_user_attributes.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
+require_relative '../rlib/get_user_attributes.rb'
 
 def load_csv(filename:)
   user = {}
@@ -58,14 +58,10 @@ doc1_hash = load_csv(filename: "auckland_2017-06-17_HR_dump_from_Figshare.csv")
 doc2 = Nokogiri::XML(File.open(@xml_source['current_xml_filename']))
 doc2_hash = xml_to_hash(xml_data: doc2, tag: '//Record')
 
-#Old file
-puts doc1_hash.length
-puts doc1_hash['rbur004']
-#new File
-puts doc2_hash.length
-puts doc2_hash['rbur004']
+puts "Old user count     = #{doc1_hash.length}"
+puts "Current user count = #{doc2_hash.length}"
 
-gen_old_users_xml(filename: new_filename, old_users: doc1_hash, current_users: doc2_hash)
+gen_old_users_xml(filename: new_filename, old_users: doc1_hash, current_users: doc2_hash, get_uoa_id: true, active: false)
 
 #automate next file to upload for python script to consume.
 puts "Creating hr_file_to_upload.json for xml file: #{new_filename}"
