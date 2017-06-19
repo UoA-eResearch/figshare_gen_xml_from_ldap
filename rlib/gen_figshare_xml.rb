@@ -6,8 +6,10 @@
 #  @param email [String] email address
 #  @param primary_group [String] Default Figshare group for this user ('' means UoA)
 #  @param force_quota_update [Boolean] Quota remains unchanged for existing users, unless this is true.
+#  @param quota [String|Numeric] Users new quota (but only if this is a new user, or force_quota_update is set)
+#  @param active [Boolean] User is active. Defaults to true. If false, user can't login, and quota is set to current usage.
 #  @return [String] Single users XML record for Figshare HR feed
-def gen_user_xml(upi:, givenname:, surname:,  email:, uoa_id: nil, primary_group: '', force_quota_update: false, quota: nil)
+def gen_user_xml(upi:, givenname:, surname:,  email:, uoa_id: nil, primary_group: '', force_quota_update: false, quota: nil, active: true)
   quota ||= @override_quota[upi] == nil ? @default_quota : @override_quota[upi] 
   return <<-EOT
   <Record>
@@ -15,7 +17,7 @@ def gen_user_xml(upi:, givenname:, surname:,  email:, uoa_id: nil, primary_group
      <FirstName>#{givenname}</FirstName>
      <LastName>#{surname}</LastName>
      <Email>#{email}</Email>
-     <IsActive>y</IsActive>
+     <IsActive>#{active ? 'Y' : 'N'}</IsActive>
      <UserQuota>#{quota}</UserQuota>#{force_quota_update ? "\n     <ForceQuotaUpdate>Y</ForceQuotaUpdate>" : ''}
      <UserAssociationCriteria>#{primary_group}</UserAssociationCriteria>#{uoa_id != nil ? "\n     <SymplecticUniqueID>#{uoa_id}</SymplecticUniqueID>" : '' }
   </Record>
