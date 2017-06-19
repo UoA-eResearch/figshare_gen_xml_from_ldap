@@ -13,7 +13,7 @@ def init
   @academic_department_code_to_faculty  = load_json_file("#{@script_dir}/conf/academic_department_code_to_faculty.json")
   @override_group  = load_json_file("#{@script_dir}/conf/override_group.json")
   @override_quota  = load_json_file("#{@script_dir}/conf/override_quota.json")
-  @default_quota = 1024 * 1024 * 1024
+  @default_quota = 1024 * 1024 * 1024 * 10
 
   @ldap = Net::LDAP.new  :host => "uoa.auckland.ac.nz", # your LDAP host name or IP goes here,
                         :port => "389", # your LDAP host port goes here,
