@@ -1,6 +1,8 @@
 conf/auth.json
 conf/figshare_hr_key.json
 conf/test_figshare_hr_key.json
+conf/override_group.json
+conf/override_quota.json
 user_xml_files/
 Upload/test_hr_file_to_upload.json
 Upload/hr_file_to_upload.json
