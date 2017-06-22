@@ -43,16 +43,16 @@ File.open(OUTPUT_FILE, "w+") do |fd|
   fd.puts "{"
   @flat_uos.sort.each do |node, attributes|
     if attributes[:faculty] != nil
-      fd.puts "  \"#{"%-15s" % (node + '":') } #{"%12s" % ('"' + attributes[:faculty] + '",') }           //  #{attributes[:descr]}"
+      fd.puts "  \"#{"%-15s" % (node + '":') } { \"faculty\": #{ "%12s" % ('"' + attributes[:faculty] + '"') }, \"descr\":   \"#{attributes[:descr]}\" },"
     else
-      fd.puts "  \"#{"%-15s" % (node + '":') } #{"%12s" % ("null" + ',') }           //  #{attributes[:descr]}"
+      fd.puts "  \"#{"%-15s" % (node + '":') } { \"faculty\": #{"%12s" % ("null") }, \"descr\":   \"#{attributes[:descr]}\" },"
     end
   end
   #Couple in the LDAP, that don't look to be in the UoS
   ['MAIDMENT', 'OUTREACH'].each do |s|
-    fd.puts "  \"#{"%-15s" % ("#{s}\":") } #{"%12s" % "null,"}           //  #{s}" if @flat_uos[s] == nil
+    fd.puts "  \"#{"%-15s" % ("#{s}\":") } { \"faculty\": #{"%12s" % "null"}, \"descr\":   \"#{s}\" }," if @flat_uos[s] == nil
   end
-  fd.puts "  \"#{"%-15s" % ('EOT":') } #{"%12s" % "null"}           //  End of Text"
+  fd.puts "  \"#{"%-15s" % ('EOT":') } { \"faculty\": #{"%12s" % "null"}, \"descr\":   \"End of Text\" }"
   fd.puts "}"
 end
   

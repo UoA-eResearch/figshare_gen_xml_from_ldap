@@ -16,13 +16,15 @@ end
 
 def test_academic_department_code_to_faculty(department)
   puts "Map department #{department} to its faculty"
-  p @academic_department_code_to_faculty[department]
+  group_def = @academic_department_code_to_faculty[department]
+  p group_def == nil ? 'nil' : group_def["faculty"]
   puts
 end
 
 def test_course_codes_to_faculty(course_code)
   puts "Map the course code #{course_code} to its faculty"
-  p @course_codes_to_faculty[course_code]
+  group_def = @course_codes_to_faculty[course_code]
+  p group_def == nil ? 'nil' : group_def["faculty"]
   puts
 end
 
@@ -75,10 +77,9 @@ begin
           member = value.split('=')[1].split(',')[0]
           users_groups[member] ||= []    #If this is the users first group, then create an Array
           #Add this group to this users group Array, only if group not already in Array
-          if staff && (faculty = @academic_department_code_to_faculty[group]) != nil && users_groups[member].include?(faculty) == false
-            users_groups[member] << faculty 
-          elsif (faculty = @course_codes_to_faculty[group]) != nil && users_groups[member].include?(faculty) == false
-            users_groups[member] << faculty 
+          group_def =  staff ? @academic_department_code_to_faculty[group] : @course_codes_to_faculty[group]
+          if (group_def != nil && faculty = group_def["faculty"]) != nil && users_groups[member].include?(faculty) == false
+            users_groups[member] << group_def["faculty"]
           end
         end
       end
@@ -97,8 +98,8 @@ init
 #test_phd_download(ldap: @ldap)
 #test_staff_download(ldap: @ldap)
 
-#users = {}
-#testing_get_groups(ldap: @ldap, users_groups: users)
+users = {}
+testing_get_groups(ldap: @ldap, users_groups: users)
 #testing_get_groups(ldap: @ldap, users_groups: users, staff: false)
 #puts users.length
-#users.each { |u,v| puts "#{u} => #{v}"}
+users.each { |u,v| puts "#{u} => #{v}"}
