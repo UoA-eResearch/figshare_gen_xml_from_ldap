@@ -1,4 +1,5 @@
-#!/usr/bin/env ruby
+#!/usr/local/bin/ruby
+##!/usr/bin/env ruby
 require_relative '../rlib/init.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
 require_relative '../rlib/get_user_attributes.rb'
@@ -28,7 +29,7 @@ users_groups.each do |k,v|
   user_attributes[k] = get_user_attributies(ldap: @ldap, upi: k, attributes: {'cn' => :upi, 'sn' => :surname, 'givenname'=>:givenname, 'mail'=>:email, 'employeenumber'=>:uoa_id} )
   #Add in the faculty, which isn't in a users basic LDAP attributes.
   user_attributes[k][:primary_group] = @override_group[k] != nil ? @override_group[k] : (v.length == 1 ? v[0] : '')
-  #user_attributes[k][:force_quota_update] = true
+  #user_attributes[k][:force_quota_update] = true  #Override the Figshare quota, which may have been changed through web interface.
 end
 
 #Add upload user.
