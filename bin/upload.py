@@ -12,13 +12,12 @@ filename = inspect.getframeinfo(inspect.currentframe()).filename
 path = os.path.dirname(os.path.abspath(filename))
 
 KEY_FILE = path + '/../conf/figshare_hr_key.json'
+FILE_NAME_DEF = path + '/../Upload/hr_file_to_upload.json'
 
 with open(KEY_FILE) as json_file:
     json_data = json.load(json_file)
 
 TOKEN=json_data['hr_figshare_token']
-
-FILE_NAME_DEF = path + '/hr_file_to_upload.json'
 
 with open(FILE_NAME_DEF) as json_file:
     json_data = json.load(json_file)
