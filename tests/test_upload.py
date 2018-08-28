@@ -3,10 +3,13 @@
 import requests
 import json
 
-FILE_NAME_DEF = 'test_hr_file_to_upload.json'
+filename = inspect.getframeinfo(inspect.currentframe()).filename
+path = os.path.dirname(os.path.abspath(filename))
+
+KEY_FILE = path + '/../conf/test_figshare_hr_key.json'
+FILE_NAME_DEF = path + '/../Upload/test_hr_file_to_upload.json'
 
 API_URL = 'https://api.figsh.com/v2/institution/hrfeed/upload'
-KEY_FILE = '../conf/test_figshare_hr_key.json'
 
 with open(KEY_FILE) as json_file:
     json_data = json.load(json_file)
