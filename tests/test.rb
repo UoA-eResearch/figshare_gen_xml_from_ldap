@@ -1,4 +1,5 @@
-#!/usr/bin/env ruby
+#!/usr/local/bin/ruby
+##!/usr/bin/env ruby
 require_relative '../rlib/init.rb'
 require_relative '../rlib/get_user_attributes.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
