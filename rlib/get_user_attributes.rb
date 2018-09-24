@@ -52,8 +52,8 @@ def get_phd_groups(ldap:, users_groups: )
         users_groups[member] ||= []    #If this is the users first group, then create an Array
         #Add this group to this users group Array, only if group not already in Array
         group_def =  @course_codes_to_faculty[group]
-        if (group_def != nil && faculty = group_def["faculty"]) != nil && users_groups[member].include?(faculty) == false
-          users_groups[member] << group_def["faculty"]
+        if (group_def != nil && (faculty = group_def["faculty"])) != nil && faculty != '' && users_groups[member].include?(faculty) == false
+          users_groups[member] << faculty
         end
       end
     end
@@ -77,8 +77,8 @@ def get_staff_groups(ldap:, users_groups:)
           users_groups[member] ||= []    #If this is the users first group, then create an Array
           #Add this group to this users group Array, only if group not already in Array
           group_def =  @academic_department_code_to_faculty[group]
-          if (group_def != nil && faculty = group_def["faculty"]) != nil && users_groups[member].include?(faculty) == false
-            users_groups[member] << group_def["faculty"]
+          if (group_def != nil && (faculty = group_def["faculty"])) != nil && faculty != '' && users_groups[member].include?(faculty) == false
+            users_groups[member] << faculty
           end
         end
       end
