@@ -402,7 +402,7 @@
   "MRKTNG":        { "faculty":   "business", "descr":   "Marketing" },
   "MUSIC":         { "faculty":      "nicai", "descr":   "Music" },
   "MWILKINS":      { "faculty":    "science", "descr":   "Maurice Wilkins Centre" },
-  "NESI":          { "faculty":         null, "descr":   "National eScience Infrastructure" },
+  "NESI":          { "faculty":       "nesi", "descr":   "National eScience Infrastructure" },
   "NETACCT":       { "faculty":         null, "descr":   "CAPS and NetAccount" },
   "NETOPS":        { "faculty":         null, "descr":   "Network Operations" },
   "NETWORK":       { "faculty":         null, "descr":   "Network Infrastructure" },
