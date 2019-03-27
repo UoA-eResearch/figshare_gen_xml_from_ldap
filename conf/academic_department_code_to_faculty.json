@@ -557,7 +557,7 @@
   "B&ERSHSPRT":    { "faculty":         "business", "descr":   "" },
   "BUSETECSER":    { "faculty":         null, "descr":   "" },
   "BUSSERV":       { "faculty":         null, "descr":   "" },
-  "CAIRSHSPRT":    { "faculty":         null, "descr":   "" },
+  "CAIRSHSPRT":    { "faculty":         "nicai", "descr":   "" },
   "CAPPROG":       { "faculty":         null, "descr":   "" },
   "CIE":           { "faculty":         null, "descr":   "" },
   "CISO":          { "faculty":         null, "descr":   "" },
