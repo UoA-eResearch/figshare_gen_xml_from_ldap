@@ -1,3 +1,4 @@
+#!/usr/local/bin/ruby
 #Compare an old XML upload file, with the latest one, and generate
 #an upload file of those people no longer at the University.
 #Set these peoples quota to 0, but don't stop them logging in.
@@ -27,14 +28,14 @@ def xml_to_hash(xml_data:, tag:)
   return a
 end
 
-@script_dir = File.dirname(__FILE__) + '/..'
+@script_dir = __dir__ + '/../'
 init
-new_filename = "#{@script_dir}/user_xml_files/figshare_hr_feed_correction_#{Time.now.strftime("%Y-%m-%d")}.xml"
+new_filename = "#{@script_dir}user_xml_files/figshare_hr_feed_correction_#{Time.now.strftime("%Y-%m-%d")}.xml"
 
-@xml_source  = load_json_file("zero_conf.json")
+@xml_source  = load_json_file(__dir__ + "/zero_conf.json")
 
-doc1 = Nokogiri::XML(File.open(@xml_source['old_xml_filename']))
-doc2 = Nokogiri::XML(File.open(@xml_source['current_xml_filename']))
+doc1 = Nokogiri::XML(File.open(@script_dir + @xml_source['old_xml_filename']))
+doc2 = Nokogiri::XML(File.open(@script_dir + @xml_source['current_xml_filename']))
 
 doc1_hash = xml_to_hash(xml_data: doc1, tag: '//Record')
 doc2_hash = xml_to_hash(xml_data: doc2, tag: '//Record')
