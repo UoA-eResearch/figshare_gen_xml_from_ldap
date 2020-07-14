@@ -1,6 +1,16 @@
 # figshare_gen_xml_from_ldap
 Reads the UoA LDAP and generates an XML HR file to upload to Figshare.
 
+Run from cron, several times a day, via bin/cron.sh
+
+```
+  run.rb
+```
+Generates a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
+This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
+
+##Configuration
+
 conf/academic_department_code_to_faculty.json maps academic department codes the department's faculty.
 
 * There are a few departments in more than one faculty, so the primary one has been chosen.
@@ -13,13 +23,19 @@ conf/course_codes_to_faculty.json maps student course codes (papers) to a facult
 conf/override_group.json is a list of people we want in specific groups, regardless of the LDAP grouping.
  
 * A null group is "" in this file, where in the others, it is null
+* Adding a user to this file will create a figshare account, even if the user is not Staff or PhD
+```
+{
+  "ffis999": { "group": "", "note": "Figshare Admin, so need to be at UoA level", "expires": "9999-12-31"}
+}
+```
 
-Just execute:
+conf/override_quota.json is a list of people given a non-standard default quota (in bytes).
 ```
-  run.rb
+{
+  "ffis999": 10737418240,
+}
 ```
-and get a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
-This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
 
 conf/auth.json is for accessing the LDAP
 ```
@@ -35,7 +51,7 @@ We set up a dummy user in figshare, with admin rights, and assigned this key to 
   "hr_figshare_token": "xxxxxxxxxxxxxxxxxxxx..."
 }
 ```
-
+##Figshare XML
 
 Figshare XML is of the form
 ```

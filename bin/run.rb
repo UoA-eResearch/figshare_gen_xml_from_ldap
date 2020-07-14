@@ -1,5 +1,6 @@
 #!/usr/local/bin/ruby
 ##!/usr/bin/env ruby
+require 'time'
 require_relative '../rlib/init.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
 require_relative '../rlib/get_user_attributes.rb'
@@ -26,7 +27,7 @@ get_staff_groups(ldap: @ldap, users_groups: users_groups)
 #Override the faculty, for users in the override_group.json file.
 #Has a side effect of adding in a user that isn't in the PhD or Staff LDAP groups
 @override_group.each do |k,v|
-  users_groups[k] = [v]
+  users_groups[k] = [v['group']] if Time.parse(v['expires']) > Time.now
 end
 
 #We need to query the LDAP for each users basic details.
