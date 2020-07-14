@@ -3,9 +3,6 @@ Reads the UoA LDAP and generates an XML HR file to upload to Figshare.
 
 Run from cron, several times a day, via bin/cron.sh
 
-```
-  run.rb
-```
 Generates a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
 This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
 
