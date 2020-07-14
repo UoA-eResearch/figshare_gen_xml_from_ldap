@@ -20,15 +20,21 @@ FIGSHARE_HR = {
 }
 
 user_attributes = {} #We build up all the XML attributes for a user in this hash.
-users_groups = {}    #We fetch user faculty membership, by upi, in this hash.
+users_groups = {}    #We fetch user faculty membership, by upi, in this hash. Array of Faculty
 get_phd_groups(ldap: @ldap, users_groups: users_groups)
 get_staff_groups(ldap: @ldap, users_groups: users_groups)
+#Override the faculty, for users in the override_group.json file.
+#Has a side effect of adding in a user that isn't in the PhD or Staff LDAP groups
+@override_group.each do |k,v|
+  users_groups[k] = [v]
+end
 
 #We need to query the LDAP for each users basic details.
 users_groups.each do |k,v|
   user_attributes[k] = get_user_attributies(ldap: @ldap, upi: k, attributes: {'cn' => :upi, 'sn' => :surname, 'givenname'=>:givenname, 'mail'=>:email, 'employeenumber'=>:uoa_id} )
-  #Add in the faculty, which isn't in a users basic LDAP attributes.
-  user_attributes[k][:primary_group] = @override_group[k] != nil ? @override_group[k] : (v.length == 1 ? v[0] : '')
+  #Set the user's primary figshare group to the faculty, if there is only one, or to the empty string, if there is more than one.
+  #The empty string force the primary group to be at the UoA level.
+  user_attributes[k][:primary_group] = (v.length == 1 ? v[0] : '')
   #user_attributes[k][:force_quota_update] = true  #Override the Figshare quota, which may have been changed through web interface.
 end
 
