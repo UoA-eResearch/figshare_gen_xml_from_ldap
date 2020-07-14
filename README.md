@@ -9,7 +9,7 @@ Run from cron, several times a day, via bin/cron.sh
 Generates a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
 This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
 
-##Configuration
+## Configuration
 
 conf/academic_department_code_to_faculty.json maps academic department codes the department's faculty.
 
@@ -51,7 +51,7 @@ We set up a dummy user in figshare, with admin rights, and assigned this key to 
   "hr_figshare_token": "xxxxxxxxxxxxxxxxxxxx..."
 }
 ```
-##Figshare XML
+## Figshare XML
 
 Figshare XML is of the form
 ```
@@ -75,7 +75,7 @@ A null UserAssociationCriteria adds the user in at the UoA level of the Figshare
 
 There are test versions of upload.py, with associated test keys, that talk to auckland.figsh.com.
 
-##Ubuntu
+## Ubuntu
 
 Installing on Ubuntu, where python and ruby are packaged, I had to 
 ```
@@ -87,7 +87,7 @@ Also added figshare user to system and set up cron as that user.
 adduser --system  --disabled-password --shell /bin/sh --group figshare figshare
 ```
 
-##Annual Cleanup of old users
+## Annual Cleanup of old users
 We need to clean up old users, so once a year we need to update the annual_fix/zero_conf.json to specify a file from last year, and the current xml feed file. Then we run zero_old_users_quota_.rb to generate a diff xml file, with all the old users in it, and then run Upload/upload.py to update Figshare.
 
 
