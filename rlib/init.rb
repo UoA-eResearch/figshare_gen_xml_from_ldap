@@ -1,6 +1,10 @@
 require 'net/ldap'
 require 'json'
 
+#LDAP_SERVER = "ldap.uoa.auckland.ac.nz"  #VIP for LDAP, which is repeatedly hitting a dead server.
+LDAP_SERVER = "uoaadsp01.uoa.auckland.ac.nz"  #Override VIP, and go to just one server. Bad, but it is working.
+
+
 def load_json_file(filename)
   JSON.parse(File.read(filename))
 end
@@ -15,7 +19,7 @@ def init
   @override_quota  = load_json_file("#{@script_dir}/conf/override_quota.json")
   @default_quota = 1024 * 1024 * 1024 * 10
 
-  @ldap = Net::LDAP.new  :host => "uoa.auckland.ac.nz", # your LDAP host name or IP goes here,
+  @ldap = Net::LDAP.new  :host => LDAP_SERVER, # your LDAP host name or IP goes here,
                         :port => "389", # your LDAP host port goes here,
                         #:encryption => :simple_tls,
                         :base => "DC=UoA,DC=auckland,DC=ac,DC=nz", # the base of your AD tree goes here,
@@ -25,4 +29,3 @@ def init
                           :password => @auth['password']  # the user's password goes here
                         }
 end
-
