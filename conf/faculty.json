@@ -1,0 +1,15 @@
+"faculty":  [
+  "nicai",
+  "business",
+  "arts",
+  "edu",
+  "eng",
+  "law",
+  "fmhs",
+  "science",
+  //Institutes and other groupings
+  "abi",
+  "compass", //really Arts, but they have a distinct figshare presence. 
+  "liggins",
+  "nesi"
+]
