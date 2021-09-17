@@ -13,6 +13,7 @@ if [ $? != 0 ] ; then  exit 0 ; fi
 
 log_date=`date "+%Y-%m-%d"`
 base_dir="/home/figshare/figshare_gen_xml_from_ldap"
+
 ${base_dir}/bin/run.rb > ${base_dir}/log/run_${log_date}.log 2>&1
 #Upload commented out until we get the firewall open.
 ${base_dir}/bin/upload.py >> ${base_dir}/log/run_${log_date}.log 2>&1
