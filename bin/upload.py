@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python3
 
 import requests
 import json
@@ -26,7 +26,7 @@ FILE_NAME=json_data['filename'] #File should contain absolute path.
 
 def main():
     headers = {"Authorization": "token " + TOKEN}
-    print "Uploading: ", FILE_NAME
+    print("Uploading: ", FILE_NAME )
     with open(FILE_NAME, 'rb') as fin:
         files = {'hrfeed': (FILE_NAME, fin)}
         resp = requests.post(API_URL, files=files, headers=headers)
