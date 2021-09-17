@@ -10,7 +10,12 @@
 #  @param active [Boolean] User is active. Defaults to true. If false, user can't login, and quota is set to current usage.
 #  @return [String] Single users XML record for Figshare HR feed
 def gen_user_xml(upi:, givenname:, surname:,  email:, uoa_id: nil, primary_group: '', force_quota_update: false, quota: nil, active: true)
-  quota ||= @override_quota[upi] == nil ? @default_quota : @override_quota[upi] 
+  if @override_quota[upi].nil?
+    quota ||= @default_quota  # Use default quota, if we haven't specified a value in the 'quota' param
+  elsif quota.nil?            # Overriding quota, and we haven't specificed the quota in the 'quota' param
+    quota = @override_quota[upi] 
+    force_quota_update = true
+  end
   return <<-EOT
   <Record>
      <UniqueID>#{upi}@auckland.ac.nz</UniqueID>
