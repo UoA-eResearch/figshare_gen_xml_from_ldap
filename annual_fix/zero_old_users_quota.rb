@@ -1,9 +1,9 @@
 #!/usr/local/bin/ruby
-#Compare an old XML upload file, with the latest one, and generate
-#an upload file of those people no longer at the University.
-#Set these peoples quota to 0, but don't stop them logging in.
-#(Though they may not be able to authenticate with Tuakiri, having left)
-#Also set these users group to unassociated (verses '', which sets it to UoA)
+# Compare an old XML upload file, with the latest one, and generate
+# an upload file of those people no longer at the University.
+# Set these peoples quota to 0, but don't stop them logging in.
+# (Though they may not be able to authenticate with Tuakiri, having left)
+# Also set these users group to unassociated (verses '', which sets it to UoA)
 
 require 'nokogiri'
 require_relative '../rlib/init.rb'
@@ -16,11 +16,11 @@ def xml_to_hash(xml_data:, tag:)
     h = {}
     row.children.map do |child|
       case child.name
-      when 'UniqueID'; h[:upi] = child.text.strip.split('@')[0]
-      when 'FirstName'; h[:givenname] = child.text.strip
-      when 'LastName'; h[:surname] = child.text.strip
-      when 'Email'; h[:email] = child.text.strip
-      when 'SymplecticUniqueID'; h[:uoa_id] = child.text.strip
+      when 'UniqueID' then h[:upi] = child.text.strip.split('@')[0]
+      when 'FirstName' then h[:givenname] = child.text.strip
+      when 'LastName' then h[:surname] = child.text.strip
+      when 'Email' then h[:email] = child.text.strip
+      when 'SymplecticUniqueID' then h[:uoa_id] = child.text.strip
       end
     end
     a[h[:upi]] = h
@@ -30,9 +30,9 @@ end
 
 @script_dir = __dir__ + '/../'
 init
-new_filename = "#{@script_dir}user_xml_files/figshare_hr_feed_correction_#{Time.now.strftime("%Y-%m-%d")}.xml"
+new_filename = "#{@script_dir}user_xml_files/figshare_hr_feed_correction_#{Time.now.strftime('%Y-%m-%d')}.xml"
 
-@xml_source  = load_json_file(__dir__ + "/zero_conf.json")
+@xml_source  = load_json_file(__dir__ + '/zero_conf.json')
 
 doc1 = Nokogiri::XML(File.open(@script_dir + @xml_source['old_xml_filename']))
 doc2 = Nokogiri::XML(File.open(@script_dir + @xml_source['current_xml_filename']))
@@ -42,10 +42,10 @@ doc2_hash = xml_to_hash(xml_data: doc2, tag: '//Record')
 
 gen_old_users_xml(filename: new_filename, old_users: doc1_hash, current_users: doc2_hash)
 
-#automate next file to upload for python script to consume.
+# automate next file to upload for python script to consume.
 puts "Creating hr_file_to_upload.json for xml file: #{new_filename}"
-File.open("#{@script_dir}/Upload/hr_file_to_upload.json","w") do |fd|
+File.open("#{@script_dir}/Upload/hr_file_to_upload.json", 'w') do |fd|
   fd.puts "{\n\"filename\": \"#{new_filename}\"\n}"
 end
 puts
-puts "Now run Upload/upload"
+puts 'Now run Upload/upload'
