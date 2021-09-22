@@ -28,7 +28,7 @@ def get_phd_groups(ldap:, users_groups: )
   treebase = 'OU=now,OU=Groups,dc=UoA,dc=auckland,dc=ac,dc=nz'
 
   ldap.search( base: treebase, filter: filter, attributes: [ 'member' ] ) do |entry|
-    group = entry.dn.split(',')[0].split('=')[1].split('.')[0]
+    # group = entry.dn.split(',')[0].split('=')[1].split('.')[0]
     entry.each do |attribute, values|
       next unless attribute =~ /^member/ # Getting empty member attributes, and new attribute: member;range=0-xxxx, as this group is large.
 
