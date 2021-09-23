@@ -11,8 +11,12 @@
 #  @return [String] Single users XML record for Figshare HR feed
 def gen_user_xml(upi:, givenname:, surname:, email:, uoa_id: nil, primary_group: '', force_quota_update: false, quota: nil, active: true)
   if @override_quota[upi].nil?
-    quota ||= @default_quota  # Use default quota, if we haven't specified a value in the 'quota' param
-  elsif quota.nil?            # Overriding quota, and we haven't specificed the quota in the 'quota' param
+    # No override quota record for this user
+    # Use default quota, if we haven't specified a value in the 'quota' param
+    quota ||= @default_quota
+  elsif quota.nil?
+    # There is an override quota record for this user.
+    # Overriding quota, and we haven't specificed the quota in the method's 'quota' param
     quota = @override_quota[upi]
     force_quota_update = true
   end

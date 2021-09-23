@@ -1,4 +1,3 @@
-# get_user_attributies reads from the UoA LDAP, and retrieves a user's record
 #  @param ldap [NET::LDAP] LDAP file descriptor open to to UoA LDAP
 #  @param attributes [Hash] pairs of <LDAP attribute> => <Output attribute name in Hash>
 #  @return [Hash] Single users LDAP record, with just the attributes requested
