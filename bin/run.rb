@@ -3,11 +3,15 @@ require 'time'
 require_relative '../rlib/init.rb'
 require_relative '../rlib/gen_figshare_xml.rb'
 require_relative '../rlib/get_user_attributes.rb'
+require_relative '../rlib/figshare_user_record.rb'
 
 puts "#{Time.now} Started run"
 
 @script_dir = File.dirname(__FILE__) + '/..'
 init # Connect to LDAP, and read the conf files.
+
+# Unset overide quota, if the quota is already set to the same value.
+update_quota_override(users: @override_quota)
 
 # Ensure we have the upload user in the feed
 FIGSHARE_HR = {
