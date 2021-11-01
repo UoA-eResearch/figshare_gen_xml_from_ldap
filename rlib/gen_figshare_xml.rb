@@ -41,7 +41,7 @@ def gen_xml(users:, filename: nil)
   fd.puts '<?xml version="1.0" encoding="utf-8"?>'
   fd.puts '<HRFeed>'
   users.each do |_upi, attributes| # Enumerate through the user records.
-    fd.puts gen_user_xml(attributes) # attributes passed as a Ruby hash, rather than individually.
+    fd.puts gen_user_xml(**attributes) # attributes passed as a Ruby hash, rather than individually.
   end
   fd.puts '</HRFeed>'
 end
@@ -68,7 +68,7 @@ def gen_old_users_xml(old_users:, current_users:, filename: nil, get_uoa_id: fal
       user_attributes = get_user_attributies(ldap: @ldap, upi: upi, attributes: { 'cn' => :upi, 'employeenumber' => :uoa_id } )
       attributes[:uoa_id] = user_attributes[:uoa_id]
     end
-    fd.puts gen_user_xml(attributes) # attributes passed as a Ruby hash, rather than individually.
+    fd.puts gen_user_xml(**attributes) # attributes passed as a Ruby hash, rather than individually.
   end
   fd.puts '</HRFeed>'
 end
