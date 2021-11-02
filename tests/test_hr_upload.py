@@ -1,12 +1,17 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import requests
 import json
+import os
+import sys
+import inspect
+
+API_URL = 'https://api.figshare.com/v2/institution/hrfeed/upload'
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 path = os.path.dirname(os.path.abspath(filename))
 
-KEY_FILE = path + '/../conf/test_figshare_hr_key.json'
+KEY_FILE = path + '/conf/test_figsh_hr_key.json'
 FILE_NAME_DEF = path + '/../Upload/test_hr_file_to_upload.json'
 
 API_URL = 'https://api.figsh.com/v2/institution/hrfeed/upload'
