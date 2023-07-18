@@ -19,8 +19,9 @@ def init
   @default_quota = 1024 * 1024 * 1024 * 10
 
   @ldap = Net::LDAP.new host: LDAP_SERVER, # your LDAP host name or IP goes here,
-                        port: '389', # your LDAP host port goes here,
-                        # :encryption => :simple_tls,
+                        # port: '389', # unencrypted LDAP host port,
+                        port: '636', # TLS port
+                        encryption: :simple_tls,
                         base: 'DC=UoA,DC=auckland,DC=ac,DC=nz', # the base of your AD tree goes here,
                         auth: {
                           method: :simple,
