@@ -36,4 +36,10 @@ def main():
         resp.raise_for_status()
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        # Print exception into the log
+        print(e)
+        # Generate a notification that the upload failed
+        # ?
