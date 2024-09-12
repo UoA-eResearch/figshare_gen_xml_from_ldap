@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby
+#!/home/figshare/ruby3/bin/ruby
 require 'time'
 require_relative '../rlib/init.rb'
 require_relative '../rlib/gen_figshare_xml.rb'

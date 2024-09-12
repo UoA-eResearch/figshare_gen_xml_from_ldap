@@ -2,6 +2,9 @@
 Reads the UoA LDAP and generates an XML HR file to upload to Figshare.
 
 Run from cron, several times a day, via bin/cron.sh
+```
+1 12 * * * umask 027; /home/figshare/bin/cron.sh > /home/figshare/log/last_run.log 2>&1
+```
 
 Generates a new XML file in the user_xml_files/ directory, called figshare_hr_feed_Year-Month-Day.xml
 This xml file's name is also put into Upload/hr_file_to_upload.json, so Upload/upload.py can just be run.
@@ -12,13 +15,13 @@ conf/academic_department_code_to_faculty.json maps academic department codes the
 
 * There are a few departments in more than one faculty, so the primary one has been chosen.
 * Also note that there are many non-academic department codes that get mapped to nil.
-    
+
 conf/course_codes_to_faculty.json maps student course codes (papers) to a faculty
 
 * There are conflicts here too, so a primary faculty was chosen for each course.
 
 conf/override_group.json is a list of people we want in specific groups, regardless of the LDAP grouping.
- 
+
 * A null group is "" in this file, where in the others, it is null
 * Adding a user to this file will create a figshare account, even if the user is not Staff or PhD
 ```
@@ -38,7 +41,7 @@ conf/auth.json is for accessing the LDAP
 ```
 {
   "username": "login_name",     // a user w/sufficient privileges to read from AD goes here,
-  "password": "the_password"    // the user's password goes here 
+  "password": "the_password"    // the user's password goes here
 }
 ```
 conf/figshare_hr_key.json holds the API key generated through the application menu on figshare.com
@@ -63,6 +66,7 @@ Figshare XML is of the form
      <UserQuota>10737418240</UserQuota>
      <UserAssociationCriteria>dummy</UserAssociationCriteria>
      <SymplecticUniqueID>4642721</SymplecticUniqueID>
+     <Orcid>1122-1299-6202-273X</Orcid>
   </Record>
 ...
 </HRFeed>
@@ -74,21 +78,15 @@ There are test versions of upload.py, with associated test keys, that talk to au
 
 ## Ubuntu
 
-Installing on Ubuntu, where python and ruby are packaged, I had to 
+Installing on Ubuntu, where python and ruby are packaged, I had to
 ```
  apt-get install ruby-net-ldap
  apt-get install python-requests
 ```
 Also added figshare user to system and set up cron as that user.
 ```
-adduser --system  --disabled-password --shell /bin/sh --group figshare figshare
+adduser --system  --disabled-password --shell /bin/bash --group figshare figshare
 ```
 
 ## Annual Cleanup of old users
 We need to clean up old users, so once a year we need to update the annual_fix/zero_conf.json to specify a file from last year, and the current xml feed file. Then we run zero_old_users_quota_.rb to generate a diff xml file, with all the old users in it, and then run Upload/upload.py to update Figshare.
-
-
-
-
-
-
